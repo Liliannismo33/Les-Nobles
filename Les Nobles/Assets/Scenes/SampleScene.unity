@@ -301,6 +301,5 @@ Prefab:
   m_IsPrefabAsset: 0
 --- !u!4 &1245659755 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4488360794240548, guid: 5e0e3aac8d330884e93194e406ab1605,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1245659754}
