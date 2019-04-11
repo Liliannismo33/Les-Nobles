@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 25ecd7e7f2118d9419ee25e56722ecef
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bottle
+    100004: Bottle_Liquid
+    100006: Bottleknob
+    100008: Bottlesteal_1
+    100010: Bottlesteal_2
+    400000: //RootNode
+    400002: Bottle
+    400004: Bottle_Liquid
+    400006: Bottleknob
+    400008: Bottlesteal_1
+    400010: Bottlesteal_2
+    2100000: Bottle_Material
+    2100002: Bottle_Liquid_material
+    2100004: Bottleknob_Material
+    2100006: Bottlesteal_Material
+    2300000: Bottle
+    2300002: Bottle_Liquid
+    2300004: Bottleknob
+    2300006: Bottlesteal_1
+    2300008: Bottlesteal_2
+    3300000: Bottle
+    3300002: Bottle_Liquid
+    3300004: Bottleknob
+    3300006: Bottlesteal_1
+    3300008: Bottlesteal_2
+    4300000: Bottle
+    4300002: Bottle_Liquid
+    4300004: Bottleknob
+    4300006: Bottlesteal_2
+    4300008: Bottlesteal_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottle_Liquid_material
+    second: {fileID: 2100000, guid: ba9b97a3661a43744b2efb71c10bb5cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottle_Material
+    second: {fileID: 2100000, guid: 0ac0534c1c9f5f7498d16a1f3d57df7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottleknob_Material
+    second: {fileID: 2100000, guid: 04474fb7d70d70641952558de428d9eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottlesteal_Material
+    second: {fileID: 2100000, guid: 9f8d4bb53093ff742b85c3be340f3dff, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: ef2d69fa86e94184e8dbdd171ad61850
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Commode_Base
+    100004: Commode_Lid_1
+    100006: Commode_Lid_2
+    100008: Commode_Seat
+    100010: Commode_Waterholder
+    100012: Commode_Waterholder_Button
+    100014: Commode_Waterholdercap
+    400000: //RootNode
+    400002: Commode_Base
+    400004: Commode_Lid_1
+    400006: Commode_Lid_2
+    400008: Commode_Seat
+    400010: Commode_Waterholder
+    400012: Commode_Waterholder_Button
+    400014: Commode_Waterholdercap
+    2100000: Commode_Lid_Material
+    2100002: Commode_Waterholder_Material
+    2100004: Commode_Seat_Material
+    2100006: Commode_Base_Material
+    2100008: Commode_Waterholder_Button_Material
+    2300000: Commode_Base
+    2300002: Commode_Lid_1
+    2300004: Commode_Lid_2
+    2300006: Commode_Seat
+    2300008: Commode_Waterholder
+    2300010: Commode_Waterholder_Button
+    2300012: Commode_Waterholdercap
+    3300000: Commode_Base
+    3300002: Commode_Lid_1
+    3300004: Commode_Lid_2
+    3300006: Commode_Seat
+    3300008: Commode_Waterholder
+    3300010: Commode_Waterholder_Button
+    3300012: Commode_Waterholdercap
+    4300000: Commode_Lid_2
+    4300002: Commode_Lid_1
+    4300004: Commode_Waterholdercap
+    4300006: Commode_Waterholder
+    4300008: Commode_Seat
+    4300010: Commode_Base
+    4300012: Commode_Waterholder_Button
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Commode_Base_Material
+    second: {fileID: 2100000, guid: e40eb0fd1a76a4648bf8fc9f22293795, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Commode_Lid_Material
+    second: {fileID: 2100000, guid: 36d6713c78f39b540a017858f8c7d6b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Commode_Seat_Material
+    second: {fileID: 2100000, guid: db4a9a2985ed19841909d864e4cf3c74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Commode_Waterholder_Button_Material
+    second: {fileID: 2100000, guid: 898f5215e12f077439b33b3c36d9033f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Commode_Waterholder_Material
+    second: {fileID: 2100000, guid: 316c8607fc541a54db7e17691b232d37, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

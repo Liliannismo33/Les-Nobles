@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: e418d010372803e43aad531e816564e1
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Sofa_Base
+    100004: Sofa_Pillow_1
+    100006: Sofa_Pillow_2
+    100008: Sofa_Pillow_3
+    100010: Sofa_Pillow_4
+    100012: Sofa_Pillow_5
+    100014: Sofa_Seat_Big
+    100016: Sofa_Seat_Small
+    100018: Sofa_Sidehand_1
+    100020: Sofa_Sidehand_2
+    100022: Sofa_Stand_1
+    100024: Sofa_Stand_2
+    100026: Sofa_Stand_3
+    100028: Sofa_Stand_4
+    100030: Sofa_Stand_5
+    100032: Sofa_Stand_6
+    100034: Sofa_Stand_7
+    100036: Sofa_Stand_8
+    100038: Sofa_Support_1
+    100040: Sofa_Support_2
+    400000: //RootNode
+    400002: Sofa_Base
+    400004: Sofa_Pillow_1
+    400006: Sofa_Pillow_2
+    400008: Sofa_Pillow_3
+    400010: Sofa_Pillow_4
+    400012: Sofa_Pillow_5
+    400014: Sofa_Seat_Big
+    400016: Sofa_Seat_Small
+    400018: Sofa_Sidehand_1
+    400020: Sofa_Sidehand_2
+    400022: Sofa_Stand_1
+    400024: Sofa_Stand_2
+    400026: Sofa_Stand_3
+    400028: Sofa_Stand_4
+    400030: Sofa_Stand_5
+    400032: Sofa_Stand_6
+    400034: Sofa_Stand_7
+    400036: Sofa_Stand_8
+    400038: Sofa_Support_1
+    400040: Sofa_Support_2
+    2100000: Sofa_Base_Material
+    2100002: Sofa_support_sidehand_material
+    2100004: Sofa_stand_material
+    2100006: Sofa_Seat_Material
+    2100008: Sofa_Pillow_Material
+    2300000: Sofa_Base
+    2300002: Sofa_Pillow_1
+    2300004: Sofa_Pillow_2
+    2300006: Sofa_Pillow_3
+    2300008: Sofa_Pillow_4
+    2300010: Sofa_Pillow_5
+    2300012: Sofa_Seat_Big
+    2300014: Sofa_Seat_Small
+    2300016: Sofa_Sidehand_1
+    2300018: Sofa_Sidehand_2
+    2300020: Sofa_Stand_1
+    2300022: Sofa_Stand_2
+    2300024: Sofa_Stand_3
+    2300026: Sofa_Stand_4
+    2300028: Sofa_Stand_5
+    2300030: Sofa_Stand_6
+    2300032: Sofa_Stand_7
+    2300034: Sofa_Stand_8
+    2300036: Sofa_Support_1
+    2300038: Sofa_Support_2
+    3300000: Sofa_Base
+    3300002: Sofa_Pillow_1
+    3300004: Sofa_Pillow_2
+    3300006: Sofa_Pillow_3
+    3300008: Sofa_Pillow_4
+    3300010: Sofa_Pillow_5
+    3300012: Sofa_Seat_Big
+    3300014: Sofa_Seat_Small
+    3300016: Sofa_Sidehand_1
+    3300018: Sofa_Sidehand_2
+    3300020: Sofa_Stand_1
+    3300022: Sofa_Stand_2
+    3300024: Sofa_Stand_3
+    3300026: Sofa_Stand_4
+    3300028: Sofa_Stand_5
+    3300030: Sofa_Stand_6
+    3300032: Sofa_Stand_7
+    3300034: Sofa_Stand_8
+    3300036: Sofa_Support_1
+    3300038: Sofa_Support_2
+    4300000: Sofa_Base
+    4300002: Sofa_Support_1
+    4300004: Sofa_Sidehand_1
+    4300006: Sofa_Stand_1
+    4300008: Sofa_Support_2
+    4300010: Sofa_Sidehand_2
+    4300012: Sofa_Stand_2
+    4300014: Sofa_Stand_4
+    4300016: Sofa_Stand_3
+    4300018: Sofa_Stand_6
+    4300020: Sofa_Stand_5
+    4300022: Sofa_Stand_8
+    4300024: Sofa_Stand_7
+    4300026: Sofa_Seat_Big
+    4300028: Sofa_Seat_Small
+    4300030: Sofa_Pillow_4
+    4300032: Sofa_Pillow_5
+    4300034: Sofa_Pillow_3
+    4300036: Sofa_Pillow_2
+    4300038: Sofa_Pillow_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sofa_Base_Material
+    second: {fileID: 2100000, guid: d88c5dd6889e2cb4c8d13c8b2d888d68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sofa_Pillow_Material
+    second: {fileID: 2100000, guid: 86583e2fd0d3e1a43a158c25db6a6a95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sofa_Seat_Material
+    second: {fileID: 2100000, guid: 51799007db2298446b297ed2d71a9186, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sofa_stand_material
+    second: {fileID: 2100000, guid: e7bc0c337c5252d4182927a71220d00f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sofa_support_sidehand_material
+    second: {fileID: 2100000, guid: 69fafb4289ea66c429d72ba679321021, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

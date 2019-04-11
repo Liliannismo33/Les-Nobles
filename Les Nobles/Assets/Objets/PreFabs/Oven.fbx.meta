@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 0ed9fd27ecde1a44f800341a41ac6503
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Oven_Controller
+    100004: Oven_Door
+    100006: oven_fan
+    100008: Oven_fanscrew_1
+    100010: Oven_fanscrew_2
+    100012: Oven_fanscrew_3
+    100014: Oven_Floor
+    100016: Oven_Glass
+    100018: Oven_grill
+    100020: Oven_grillsupport_1
+    100022: Oven_grillsupport_2
+    100024: Oven_grillsupport_3
+    100026: Oven_grillsupport_4
+    100028: Oven_Metal
+    100030: Oven_plate
+    100032: oven_safeplate
+    100034: Oven_safescrew_1
+    100036: Oven_safescrew_2
+    100038: Oven_safescrew_3
+    100040: Oven_safescrewplate
+    100042: Oven_sidegrill_1
+    100044: Oven_sidegrill_2
+    100046: Oven_switch
+    400000: //RootNode
+    400002: Oven_Controller
+    400004: Oven_Door
+    400006: oven_fan
+    400008: Oven_fanscrew_1
+    400010: Oven_fanscrew_2
+    400012: Oven_fanscrew_3
+    400014: Oven_Floor
+    400016: Oven_Glass
+    400018: Oven_grill
+    400020: Oven_grillsupport_1
+    400022: Oven_grillsupport_2
+    400024: Oven_grillsupport_3
+    400026: Oven_grillsupport_4
+    400028: Oven_Metal
+    400030: Oven_plate
+    400032: oven_safeplate
+    400034: Oven_safescrew_1
+    400036: Oven_safescrew_2
+    400038: Oven_safescrew_3
+    400040: Oven_safescrewplate
+    400042: Oven_sidegrill_1
+    400044: Oven_sidegrill_2
+    400046: Oven_switch
+    2100000: Oven_Floor_Material
+    2100002: Oven_Safeplate_Material
+    2100004: Oven_Fan_Material
+    2100006: Oven_screws_Material
+    2100008: Oven_Grill_Material
+    2100010: Oven_Grillsupport_Material
+    2100012: Oven_Plate_Material
+    2100014: Oven_Door_Material
+    2100016: Oven_Glass_Material
+    2100018: Oven_metal_Material
+    2100020: Oven_controller_Material
+    2100022: Oven_Switch_Material
+    2300000: Oven_Controller
+    2300002: Oven_Door
+    2300004: oven_fan
+    2300006: Oven_fanscrew_1
+    2300008: Oven_fanscrew_2
+    2300010: Oven_fanscrew_3
+    2300012: Oven_Floor
+    2300014: Oven_Glass
+    2300016: Oven_grill
+    2300018: Oven_grillsupport_1
+    2300020: Oven_grillsupport_2
+    2300022: Oven_grillsupport_3
+    2300024: Oven_grillsupport_4
+    2300026: Oven_Metal
+    2300028: Oven_plate
+    2300030: oven_safeplate
+    2300032: Oven_safescrew_1
+    2300034: Oven_safescrew_2
+    2300036: Oven_safescrew_3
+    2300038: Oven_safescrewplate
+    2300040: Oven_sidegrill_1
+    2300042: Oven_sidegrill_2
+    2300044: Oven_switch
+    3300000: Oven_Controller
+    3300002: Oven_Door
+    3300004: oven_fan
+    3300006: Oven_fanscrew_1
+    3300008: Oven_fanscrew_2
+    3300010: Oven_fanscrew_3
+    3300012: Oven_Floor
+    3300014: Oven_Glass
+    3300016: Oven_grill
+    3300018: Oven_grillsupport_1
+    3300020: Oven_grillsupport_2
+    3300022: Oven_grillsupport_3
+    3300024: Oven_grillsupport_4
+    3300026: Oven_Metal
+    3300028: Oven_plate
+    3300030: oven_safeplate
+    3300032: Oven_safescrew_1
+    3300034: Oven_safescrew_2
+    3300036: Oven_safescrew_3
+    3300038: Oven_safescrewplate
+    3300040: Oven_sidegrill_1
+    3300042: Oven_sidegrill_2
+    3300044: Oven_switch
+    4300000: Oven_Floor
+    4300002: oven_safeplate
+    4300004: oven_fan
+    4300006: Oven_safescrew_3
+    4300008: Oven_safescrew_2
+    4300010: Oven_safescrew_1
+    4300012: Oven_safescrewplate
+    4300014: Oven_fanscrew_1
+    4300016: Oven_fanscrew_2
+    4300018: Oven_fanscrew_3
+    4300020: Oven_sidegrill_1
+    4300022: Oven_grill
+    4300024: Oven_grillsupport_1
+    4300026: Oven_plate
+    4300028: Oven_Door
+    4300030: Oven_Glass
+    4300032: Oven_Metal
+    4300034: Oven_Controller
+    4300036: Oven_switch
+    4300038: Oven_grillsupport_2
+    4300040: Oven_sidegrill_2
+    4300042: Oven_grillsupport_3
+    4300044: Oven_grillsupport_4
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Door_Material
+    second: {fileID: 2100000, guid: 8b41ef7599fb9aa45bcb994299105469, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Fan_Material
+    second: {fileID: 2100000, guid: b9b74be8afd7e89498d43305e73066f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Floor_Material
+    second: {fileID: 2100000, guid: 998d309596111f04f9be8e6a665f518b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Glass_Material
+    second: {fileID: 2100000, guid: 8f0a734765b8dd5469f9caf21915ff84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Grill_Material
+    second: {fileID: 2100000, guid: fb48d280d94431046af48c68a833d023, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Grillsupport_Material
+    second: {fileID: 2100000, guid: 977b118310035dc40beaf0500a1c0481, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Plate_Material
+    second: {fileID: 2100000, guid: 119bdb777e236f549a5637c24a0189ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Safeplate_Material
+    second: {fileID: 2100000, guid: 8bf49289579353c4d9af41bb408a24c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_Switch_Material
+    second: {fileID: 2100000, guid: ee9de614cec6e02419a2086d3ba59db3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_controller_Material
+    second: {fileID: 2100000, guid: 1ff1f183e009ce24ab26a80fe1e8fe26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_metal_Material
+    second: {fileID: 2100000, guid: 9aadc54a445c2cc488f453651736e726, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oven_screws_Material
+    second: {fileID: 2100000, guid: a9cb52f56ec42c442a791eec2d030a37, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

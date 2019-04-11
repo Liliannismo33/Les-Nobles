@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: a05d09f52712fce46b6d9fea7e22afa2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Dinning_Table_Sidesteel
+    100004: Dinning_Table_Sidewood_1
+    100006: Dinning_Table_Sidewood_2
+    100008: Dinning_Table_Steelframe_1
+    100010: Dinning_Table_Steelframe_2
+    100012: Dinning_Table_Topsteel
+    100014: Dinning_Table_Topwood
+    100016: Dinning_Tablewood_1
+    400000: //RootNode
+    400002: Dinning_Table_Sidesteel
+    400004: Dinning_Table_Sidewood_1
+    400006: Dinning_Table_Sidewood_2
+    400008: Dinning_Table_Steelframe_1
+    400010: Dinning_Table_Steelframe_2
+    400012: Dinning_Table_Topsteel
+    400014: Dinning_Table_Topwood
+    400016: Dinning_Tablewood_1
+    2100000: Dinning_Tablewood_1_material
+    2100002: Dinning_Table_Wood_Material
+    2100004: Dinning_Table_Sidesteel_Material
+    2100006: Dinning_Table_Topsteel_Material
+    2300000: Dinning_Table_Sidesteel
+    2300002: Dinning_Table_Sidewood_1
+    2300004: Dinning_Table_Sidewood_2
+    2300006: Dinning_Table_Steelframe_1
+    2300008: Dinning_Table_Steelframe_2
+    2300010: Dinning_Table_Topsteel
+    2300012: Dinning_Table_Topwood
+    2300014: Dinning_Tablewood_1
+    3300000: Dinning_Table_Sidesteel
+    3300002: Dinning_Table_Sidewood_1
+    3300004: Dinning_Table_Sidewood_2
+    3300006: Dinning_Table_Steelframe_1
+    3300008: Dinning_Table_Steelframe_2
+    3300010: Dinning_Table_Topsteel
+    3300012: Dinning_Table_Topwood
+    3300014: Dinning_Tablewood_1
+    4300000: Dinning_Tablewood_1
+    4300002: Dinning_Table_Topwood
+    4300004: Dinning_Table_Sidewood_1
+    4300006: Dinning_Table_Sidesteel
+    4300008: Dinning_Table_Topsteel
+    4300010: Dinning_Table_Steelframe_2
+    4300012: Dinning_Table_Steelframe_1
+    4300014: Dinning_Table_Sidewood_2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dinning_Table_Sidesteel_Material
+    second: {fileID: 2100000, guid: 476e020712b7feb45854c997c167617a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dinning_Table_Topsteel_Material
+    second: {fileID: 2100000, guid: b68f396922003ef478a7b0ebdc7c668e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dinning_Table_Wood_Material
+    second: {fileID: 2100000, guid: 82bbf3b74f7411742ac031ad5d8ebb9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dinning_Tablewood_1_material
+    second: {fileID: 2100000, guid: 1ec43cfe7d4265944bdb82632b9ddf25, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

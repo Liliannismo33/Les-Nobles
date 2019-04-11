@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 4524c877476d8f145b1a72879a2af3eb
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Handle_1
+    100002: Handle_2
+    100004: Handle_3
+    100006: Handle_4
+    100008: Handle_5
+    100010: Handle_6
+    100012: Handle_7
+    100014: TV
+    100016: //RootNode
+    100018: TV_Cabinet
+    100020: TV_CabinetDoor_1
+    100022: TV_CabinetDoor_2
+    100024: TV_CabinetDoor_3
+    100026: TV_CabinetDoor_4
+    100028: TV_CabinetDoor_5
+    100030: TV_CabinetDoor_6
+    100032: TV_CabinetDoor_7
+    100034: TV_Cabinetglass_1
+    100036: TV_Cabinetglass_2
+    100038: TV_Cabinetglass_3
+    100040: TV_Cabinetglass_4
+    100042: TV_Cabinetglass_5
+    100044: TV_Cabinetglass_6
+    100046: TV_Cabinetglass_7
+    400000: Handle_1
+    400002: Handle_2
+    400004: Handle_3
+    400006: Handle_4
+    400008: Handle_5
+    400010: Handle_6
+    400012: Handle_7
+    400014: TV
+    400016: TV_Cabinet
+    400018: //RootNode
+    400020: TV_CabinetDoor_1
+    400022: TV_CabinetDoor_2
+    400024: TV_CabinetDoor_3
+    400026: TV_CabinetDoor_4
+    400028: TV_CabinetDoor_5
+    400030: TV_CabinetDoor_6
+    400032: TV_CabinetDoor_7
+    400034: TV_Cabinetglass_1
+    400036: TV_Cabinetglass_2
+    400038: TV_Cabinetglass_3
+    400040: TV_Cabinetglass_4
+    400042: TV_Cabinetglass_5
+    400044: TV_Cabinetglass_6
+    400046: TV_Cabinetglass_7
+    2100000: TV_Cabinet_Material
+    2100002: TV_CabinetDoor_Material
+    2100004: TV_Cabinetglass_Material
+    2100006: TV_Material
+    2100008: Handle_Material
+    2300000: Handle_1
+    2300002: Handle_2
+    2300004: Handle_3
+    2300006: Handle_4
+    2300008: Handle_5
+    2300010: Handle_6
+    2300012: Handle_7
+    2300014: TV
+    2300016: TV_Cabinet
+    2300018: TV_CabinetDoor_1
+    2300020: TV_CabinetDoor_2
+    2300022: TV_CabinetDoor_3
+    2300024: TV_CabinetDoor_4
+    2300026: TV_CabinetDoor_5
+    2300028: TV_CabinetDoor_6
+    2300030: TV_CabinetDoor_7
+    2300032: TV_Cabinetglass_1
+    2300034: TV_Cabinetglass_2
+    2300036: TV_Cabinetglass_3
+    2300038: TV_Cabinetglass_4
+    2300040: TV_Cabinetglass_5
+    2300042: TV_Cabinetglass_6
+    2300044: TV_Cabinetglass_7
+    3300000: Handle_1
+    3300002: Handle_2
+    3300004: Handle_3
+    3300006: Handle_4
+    3300008: Handle_5
+    3300010: Handle_6
+    3300012: Handle_7
+    3300014: TV
+    3300016: TV_Cabinet
+    3300018: TV_CabinetDoor_1
+    3300020: TV_CabinetDoor_2
+    3300022: TV_CabinetDoor_3
+    3300024: TV_CabinetDoor_4
+    3300026: TV_CabinetDoor_5
+    3300028: TV_CabinetDoor_6
+    3300030: TV_CabinetDoor_7
+    3300032: TV_Cabinetglass_1
+    3300034: TV_Cabinetglass_2
+    3300036: TV_Cabinetglass_3
+    3300038: TV_Cabinetglass_4
+    3300040: TV_Cabinetglass_5
+    3300042: TV_Cabinetglass_6
+    3300044: TV_Cabinetglass_7
+    4300000: TV_Cabinet
+    4300002: TV_CabinetDoor_6
+    4300004: TV_CabinetDoor_7
+    4300006: TV_Cabinetglass_7
+    4300008: TV_Cabinetglass_5
+    4300010: TV_CabinetDoor_2
+    4300012: TV_Cabinetglass_2
+    4300014: TV_CabinetDoor_3
+    4300016: TV_CabinetDoor_5
+    4300018: TV_Cabinetglass_6
+    4300020: TV_Cabinetglass_3
+    4300022: TV_CabinetDoor_1
+    4300024: TV_CabinetDoor_4
+    4300026: TV_Cabinetglass_4
+    4300028: TV_Cabinetglass_1
+    4300030: TV
+    4300032: Handle_1
+    4300034: Handle_2
+    4300036: Handle_3
+    4300038: Handle_4
+    4300040: Handle_5
+    4300042: Handle_6
+    4300044: Handle_7
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle_Material
+    second: {fileID: 2100000, guid: 0a8512edd51f2914b969e876778943f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV_CabinetDoor_Material
+    second: {fileID: 2100000, guid: 3c09f9e487045f74c86677393d14446d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV_Cabinet_Material
+    second: {fileID: 2100000, guid: fc1266e8ca7c73b4684408ffed3329a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV_Cabinetglass_Material
+    second: {fileID: 2100000, guid: 2418fb7b8d136d64cbe41a5649fb5b94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV_Material
+    second: {fileID: 2100000, guid: 7d2130989ea058e4bbfc9c87b9a93313, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
