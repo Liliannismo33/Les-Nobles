@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 59d20f16d8c960842942027036238db0
+timeCreated: 1519797243
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BFW180123_Cabinet_Light
+    100002: BFW180123_Cooker
+    100004: BFW180123_Cooker_Metal
+    100006: BFW180123_Kitchen_Basin
+    100008: BFW180123_Kitchen_Cabinet
+    100010: //RootNode
+    100012: BFW180123_Kitchen_CabinetDoor
+    100014: BFW180123_Kitchen_Mesa
+    100016: BFW180123_Light_White_001
+    400000: BFW180123_Cabinet_Light
+    400002: BFW180123_Cooker
+    400004: BFW180123_Cooker_Metal
+    400006: BFW180123_Kitchen_Basin
+    400008: BFW180123_Kitchen_Cabinet
+    400010: //RootNode
+    400012: BFW180123_Kitchen_CabinetDoor
+    400014: BFW180123_Kitchen_Mesa
+    400016: BFW180123_Light_White_001
+    2300000: BFW180123_Cabinet_Light
+    2300002: BFW180123_Cooker
+    2300004: BFW180123_Cooker_Metal
+    2300006: BFW180123_Kitchen_Basin
+    2300008: BFW180123_Kitchen_Cabinet
+    2300010: BFW180123_Kitchen_CabinetDoor
+    2300012: BFW180123_Kitchen_Mesa
+    2300014: BFW180123_Light_White_001
+    3300000: BFW180123_Cabinet_Light
+    3300002: BFW180123_Cooker
+    3300004: BFW180123_Cooker_Metal
+    3300006: BFW180123_Kitchen_Basin
+    3300008: BFW180123_Kitchen_Cabinet
+    3300010: BFW180123_Kitchen_CabinetDoor
+    3300012: BFW180123_Kitchen_Mesa
+    3300014: BFW180123_Light_White_001
+    4300000: BFW180123_Kitchen_Cabinet
+    4300002: BFW180123_Kitchen_Mesa
+    4300004: BFW180123_Cabinet_Light
+    4300006: BFW180123_Kitchen_Basin
+    4300008: BFW180123_Kitchen_CabinetDoor
+    4300010: BFW180123_Cooker_Metal
+    4300012: BFW180123_Cooker
+    4300014: BFW180123_Light_White_001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Cooker
+    second: {fileID: 2100000, guid: de4b545d83599314291d1bbf7ccdf789, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Light_White
+    second: {fileID: 2100000, guid: 5a7c55e47c34c6b47bf0f2c6daca64c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Mesa_Black_Albedo
+    second: {fileID: 2100000, guid: 0b6892ea7daea9a46a1972260ea9815b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Metal
+    second: {fileID: 2100000, guid: 2bbd530813a7a9f4dbd588e456d3ab5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Metal_Black
+    second: {fileID: 2100000, guid: 2a37eca2fe1ea174eabca5aada56b742, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Wood_Brown_Albedo
+    second: {fileID: 2100000, guid: 89daac0e6f08f8545bf14eb7fac22173, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Wood_Light_Albedo
+    second: {fileID: 2100000, guid: 800b9ce20b616cb42b45f218a24cbb71, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

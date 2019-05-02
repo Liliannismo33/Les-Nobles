@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: bc89a6a8671eb224bb101422593b05e1
+timeCreated: 1519787132
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BFW180123_Corridor_Cabinet
+    100002: BFW180123_Corridor_Cabinet_Occlusion
+    100004: BFW180123_Corridor_CabinetDoor
+    100006: //RootNode
+    100008: BFW180123_Microwave_Control
+    100010: BFW180123_Microwave_Metal
+    100012: BFW180123_Microwave_Metal_Black
+    400000: BFW180123_Corridor_Cabinet
+    400002: BFW180123_Corridor_Cabinet_Occlusion
+    400004: BFW180123_Corridor_CabinetDoor
+    400006: //RootNode
+    400008: BFW180123_Microwave_Control
+    400010: BFW180123_Microwave_Metal
+    400012: BFW180123_Microwave_Metal_Black
+    2300000: BFW180123_Corridor_Cabinet
+    2300002: BFW180123_Corridor_Cabinet_Occlusion
+    2300004: BFW180123_Corridor_CabinetDoor
+    2300006: BFW180123_Microwave_Control
+    2300008: BFW180123_Microwave_Metal
+    2300010: BFW180123_Microwave_Metal_Black
+    3300000: BFW180123_Corridor_Cabinet
+    3300002: BFW180123_Corridor_Cabinet_Occlusion
+    3300004: BFW180123_Corridor_CabinetDoor
+    3300006: BFW180123_Microwave_Control
+    3300008: BFW180123_Microwave_Metal
+    3300010: BFW180123_Microwave_Metal_Black
+    4300000: BFW180123_Corridor_Cabinet
+    4300002: BFW180123_Microwave_Metal
+    4300004: BFW180123_Corridor_CabinetDoor
+    4300006: BFW180123_Corridor_Cabinet_Occlusion
+    4300008: BFW180123_Microwave_Metal_Black
+    4300010: BFW180123_Microwave_Control
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Corridor_CabinetDoor_Albedo
+    second: {fileID: 2100000, guid: 45d85d446429b14448150ff4dca99a34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Metal
+    second: {fileID: 2100000, guid: 6720717a96f060344bfa7d821236e801, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Microwave_Control_Albedo
+    second: {fileID: 2100000, guid: ca4bde04b23b3c14ba045bd8da2f47d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Microwave_Metal_Black
+    second: {fileID: 2100000, guid: 3e965217c5734474489962b0fc3f0b6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_NoBake_Black
+    second: {fileID: 2100000, guid: 24529a7724e686d4ab9a722e7f0d409a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Wood_Brown_Albedo
+    second: {fileID: 2100000, guid: be8d526a2d5eb52429b20abfb63cf2d4, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

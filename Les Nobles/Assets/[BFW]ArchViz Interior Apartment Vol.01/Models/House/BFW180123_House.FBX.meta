@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 7810a5bd8112ece479845d9fe4349ef4
+timeCreated: 1519787922
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BFW180123_AirConditioner
+    100002: BFW180123_Door_Metal
+    100004: BFW180123_Door_Toilet
+    100006: BFW180123_Gate
+    100008: BFW180123_Gate_Metal
+    100010: //RootNode
+    100012: BFW180123_House_Ceiling
+    100014: BFW180123_House_Cement
+    100016: BFW180123_House_Kitchen_Wall
+    100018: BFW180123_House_Mesa
+    100020: BFW180123_House_Wall_White
+    100022: BFW180123_House_Wall_White_Small
+    100024: BFW180123_Subject_FloorBoard
+    100026: BFW180123_Windows
+    400000: BFW180123_AirConditioner
+    400002: BFW180123_Door_Metal
+    400004: BFW180123_Door_Toilet
+    400006: BFW180123_Gate
+    400008: BFW180123_Gate_Metal
+    400010: //RootNode
+    400012: BFW180123_House_Ceiling
+    400014: BFW180123_House_Cement
+    400016: BFW180123_House_Kitchen_Wall
+    400018: BFW180123_House_Mesa
+    400020: BFW180123_House_Wall_White
+    400022: BFW180123_House_Wall_White_Small
+    400024: BFW180123_Subject_FloorBoard
+    400026: BFW180123_Windows
+    2300000: BFW180123_AirConditioner
+    2300002: BFW180123_Door_Metal
+    2300004: BFW180123_Door_Toilet
+    2300006: BFW180123_Gate
+    2300008: BFW180123_Gate_Metal
+    2300010: BFW180123_House_Ceiling
+    2300012: BFW180123_House_Cement
+    2300014: BFW180123_House_Kitchen_Wall
+    2300016: BFW180123_House_Mesa
+    2300018: BFW180123_House_Wall_White
+    2300020: BFW180123_House_Wall_White_Small
+    2300022: BFW180123_Subject_FloorBoard
+    2300024: BFW180123_Windows
+    3300000: BFW180123_AirConditioner
+    3300002: BFW180123_Door_Metal
+    3300004: BFW180123_Door_Toilet
+    3300006: BFW180123_Gate
+    3300008: BFW180123_Gate_Metal
+    3300010: BFW180123_House_Ceiling
+    3300012: BFW180123_House_Cement
+    3300014: BFW180123_House_Kitchen_Wall
+    3300016: BFW180123_House_Mesa
+    3300018: BFW180123_House_Wall_White
+    3300020: BFW180123_House_Wall_White_Small
+    3300022: BFW180123_Subject_FloorBoard
+    3300024: BFW180123_Windows
+    4300000: BFW180123_House_Ceiling
+    4300002: BFW180123_House_Cement
+    4300004: BFW180123_Windows
+    4300006: BFW180123_Door_Toilet
+    4300008: BFW180123_Gate
+    4300010: BFW180123_House_Mesa
+    4300012: BFW180123_House_Wall_White_Small
+    4300014: BFW180123_House_Kitchen_Wall
+    4300016: BFW180123_House_Wall_White
+    4300018: BFW180123_AirConditioner
+    4300020: BFW180123_Subject_FloorBoard
+    4300022: BFW180123_Gate_Metal
+    4300024: BFW180123_Door_Metal
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_AirConditioner_Albedo
+    second: {fileID: 2100000, guid: 47abc66317103fb42bf8c8e909e4bb86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Cement
+    second: {fileID: 2100000, guid: 71506c136e7e6424e904fad4bf77c9b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Color_White
+    second: {fileID: 2100000, guid: a1d44e8958a0b7040834a387abd1bb9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_FloorBoard_Albedo
+    second: {fileID: 2100000, guid: c443829ea8207c942b0d90828013cabc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Kitchen_Wall_Albedo
+    second: {fileID: 2100000, guid: 704ececf07e1a1045bde524316bee731, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Mesa_Black_Albedo
+    second: {fileID: 2100000, guid: 3345551331b86a04b9344f2b9053f5cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Metal
+    second: {fileID: 2100000, guid: d498d4f657f796d4fb586657861f098b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Wall_White
+    second: {fileID: 2100000, guid: a4fcb55517e561142a7c244f45b01161, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Wood_Brown_Albedo
+    second: {fileID: 2100000, guid: 669d7a0099baef24c94d82ad7e884707, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
