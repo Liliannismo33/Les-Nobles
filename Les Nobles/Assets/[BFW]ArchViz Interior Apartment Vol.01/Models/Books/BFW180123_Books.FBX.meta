@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 4504054dd2a5f6d4cbf6f1018fd38c9a
+timeCreated: 1519785927
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BFW180123_Book_01
+    100002: BFW180123_Book_02
+    100004: BFW180123_Book_03
+    100006: BFW180123_Book_04
+    100008: BFW180123_Book_05
+    100010: BFW180123_Book_06
+    100012: BFW180123_Book_07
+    100014: BFW180123_Book_08
+    100016: BFW180123_Book_09
+    100018: BFW180123_Book_10
+    100020: BFW180123_Book_11
+    100022: //RootNode
+    400000: BFW180123_Book_01
+    400002: BFW180123_Book_02
+    400004: BFW180123_Book_03
+    400006: BFW180123_Book_04
+    400008: BFW180123_Book_05
+    400010: BFW180123_Book_06
+    400012: BFW180123_Book_07
+    400014: BFW180123_Book_08
+    400016: BFW180123_Book_09
+    400018: BFW180123_Book_10
+    400020: BFW180123_Book_11
+    400022: //RootNode
+    2300000: BFW180123_Book_01
+    2300002: BFW180123_Book_02
+    2300004: BFW180123_Book_03
+    2300006: BFW180123_Book_04
+    2300008: BFW180123_Book_05
+    2300010: BFW180123_Book_06
+    2300012: BFW180123_Book_07
+    2300014: BFW180123_Book_08
+    2300016: BFW180123_Book_09
+    2300018: BFW180123_Book_10
+    2300020: BFW180123_Book_11
+    3300000: BFW180123_Book_01
+    3300002: BFW180123_Book_02
+    3300004: BFW180123_Book_03
+    3300006: BFW180123_Book_04
+    3300008: BFW180123_Book_05
+    3300010: BFW180123_Book_06
+    3300012: BFW180123_Book_07
+    3300014: BFW180123_Book_08
+    3300016: BFW180123_Book_09
+    3300018: BFW180123_Book_10
+    3300020: BFW180123_Book_11
+    4300000: BFW180123_Book_01
+    4300002: BFW180123_Book_02
+    4300004: BFW180123_Book_03
+    4300006: BFW180123_Book_05
+    4300008: BFW180123_Book_06
+    4300010: BFW180123_Book_07
+    4300012: BFW180123_Book_04
+    4300014: BFW180123_Book_08
+    4300016: BFW180123_Book_09
+    4300018: BFW180123_Book_10
+    4300020: BFW180123_Book_11
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Books_01_Albedo
+    second: {fileID: 2100000, guid: 8f7c049da426e1b44a7133e86384f1f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Books_02_Albedo
+    second: {fileID: 2100000, guid: ab733aeb05bfb0443b72bd094920957d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BFW180123_Books_03_Albedo
+    second: {fileID: 2100000, guid: ec9ab099b0d5c1a458c68adcad553ed8, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
