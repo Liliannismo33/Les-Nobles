@@ -651,7 +651,6 @@ GameObject:
   - component: {fileID: 1521143494}
   - component: {fileID: 1521143493}
   - component: {fileID: 1521143492}
-  - component: {fileID: 1521143491}
   m_Layer: 0
   m_Name: EventTrigger
   m_TagString: Untagged
@@ -659,18 +658,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1521143491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1521143490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4354e0ba07c79174da7fabd55b9ea914, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstEventTrigger: {fileID: 1521143490}
 --- !u!65 &1521143492
 BoxCollider:
   m_ObjectHideFlags: 0
