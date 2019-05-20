@@ -15,6 +15,7 @@ public class NavTest : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit yes;

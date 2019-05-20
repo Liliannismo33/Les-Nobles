@@ -5,11 +5,11 @@ using UnityEngine;
 public class InteractionController : MonoBehaviour {
 
     public GameObject getTarget;
-    public int stepState;
+    public int stepState; // État actuel de l'événement
 
 	// Use this for initialization
 	void Start () {
-        stepState = EventManager.s_Singleton.actualStepFirstEvent;
+        stepState = EventManager.s_Singleton.actualStepFirstEvent; //synchronisation entre état actuel de l'événement ici et le même dans EventManager
     }
 	
 	// Update is called once per frame
