@@ -5,11 +5,11 @@ using UnityEngine;
 public class InteractionController : MonoBehaviour {
 
     public GameObject getTarget;
-    public int test;
+    public int stepState;
 
 	// Use this for initialization
 	void Start () {
-        test = EventManager.s_Singleton.actualStepFirstEvent;
+        stepState = EventManager.s_Singleton.actualStepFirstEvent;
     }
 	
 	// Update is called once per frame
@@ -21,10 +21,10 @@ public class InteractionController : MonoBehaviour {
              getTarget = ReturnClickedObject(out hitInfo);
              if ((getTarget != null) && (getTarget.tag == "PetiteFille"))
                 {
-                    if (test == 0)
+                    if (stepState == 0)
                         {
                             Debug.Log("Passage à l'étape suivante, guignol");
-                            test++;
+                            stepState++;
                         }
                     else
                 {
