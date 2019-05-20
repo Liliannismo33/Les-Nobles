@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VR;
+
 
 public class InteractionController : MonoBehaviour {
 
@@ -14,11 +16,10 @@ public class InteractionController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-    if (Input.GetMouseButtonDown(0))
+ 
+    if (OVRInput.GetDown(OVRInput.Button.One))
         {
-             RaycastHit hitInfo;
-             getTarget = ReturnClickedObject(out hitInfo);
+             getTarget = ReturnClickedObject();
              if ((getTarget != null) && (getTarget.tag == "PetiteFille"))
                 {
                     if (stepState == 0)
@@ -35,10 +36,11 @@ public class InteractionController : MonoBehaviour {
         }        
     }
 
-    GameObject ReturnClickedObject(out RaycastHit hit)
+    GameObject ReturnClickedObject()
     {
         GameObject target = null;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 10f))
         {
             target = hit.collider.gameObject;
