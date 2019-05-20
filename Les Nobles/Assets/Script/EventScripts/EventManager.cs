@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour {
 
-    public static bool eventIsActive = false;
-    public bool firstStep = false;
-
     public static EventManager s_Singleton;
+
+    public int actualStepFirstEvent = 0;
 
     private void Awake()
     {
@@ -29,14 +28,9 @@ public class EventManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-        if (eventIsActive)
+        if (s_Singleton)
         {
-            Debug.Log("Jambon");  
-            if (firstStep)
-            {
-                Debug.Log("Etape 1 terminée");
-            }
-            eventIsActive = false;
+
         }
 
     }
