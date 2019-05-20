@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.VR;
 
 
 public class InteractionController : MonoBehaviour {
 
+    public ParticleSystem particleSysteme;
     public GameObject getTarget;
     public int stepState; // État actuel de l'événement
 
 	// Use this for initialization
 	void Start () {
+        particleSysteme.Stop();
         stepState = EventManager.s_Singleton.actualStepFirstEvent; //synchronisation entre état actuel de l'événement ici et le même dans EventManager
     }
 	
@@ -44,7 +45,12 @@ public class InteractionController : MonoBehaviour {
         if (Physics.Raycast(ray, out hit, 10f))
         {
             target = hit.collider.gameObject;
+            particleSysteme.Play();
             Debug.Log ("objet détecté");
+        }
+        else
+        {
+            particleSysteme.Stop();
         }
         return target;
     }
