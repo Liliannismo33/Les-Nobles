@@ -16,42 +16,54 @@ public class InteractionController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
- 
-    if (OVRInput.GetDown(OVRInput.Button.One))
+	void FixedUpdate () {
+        
+        getTarget = ReturnSpottedObject();
+        if (getTarget !=null)
         {
-             getTarget = ReturnClickedObject();
-             if ((getTarget != null) && (getTarget.tag == "PetiteFille"))
+            if (getTarget.CompareTag("PetiteFille"))
+            {
+                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 5f);
+                if (!particleSysteme.isPlaying)
+                    particleSysteme.Play();
+            }
+            else
+            {
+                particleSysteme.Stop();
+            }
+            if (OVRInput.GetDown(OVRInput.Button.One))
+            {
+                if (getTarget.CompareTag("PetiteFille"))
                 {
                     if (stepState == 0)
-                        {
-                            Debug.Log("Passage à l'étape suivante, guignol");
-                            stepState++;
-                        }
+                    {
+                        Debug.Log("Passage à l'étape suivante, guignol");
+                        stepState++;
+                    }
                     else
-                {
-                    // ici on souhaite faire parler la petite fille (car le joueur intéragit avec elle)
-                    Debug.Log("Tu parle à la petite fille");
+                    {
+                        // ici on souhaite faire parler la petite fille (car le joueur intéragit avec elle)
+                        Debug.Log("Tu parle à la petite fille");
+                    }
                 }
-             }
-        }        
+            }
+        }     
     }
 
-    GameObject ReturnClickedObject()
+    private GameObject ReturnSpottedObject()
     {
-        GameObject target = null;
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
+        
         if (Physics.Raycast(ray, out hit, 10f))
         {
-            target = hit.collider.gameObject;
-            particleSysteme.Play();
-            Debug.Log ("objet détecté");
+            CreateOutline outlineScript = hit.collider.gameObject.GetComponent<CreateOutline>();
+            if (outlineScript != null)
+            {
+                outlineScript.ActivateOutline();
+            }
+            return hit.collider.gameObject;
         }
-        else
-        {
-            particleSysteme.Stop();
-        }
-        return target;
+        return null;
     }
 }
