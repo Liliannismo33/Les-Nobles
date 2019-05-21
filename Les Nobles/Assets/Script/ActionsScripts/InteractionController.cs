@@ -24,7 +24,7 @@ public class InteractionController : MonoBehaviour {
 	void FixedUpdate () {
         
         getTarget = ReturnSpottedObject(); // Actualisation permanente du RayCast
-        if (getTarget !=null)
+        if (getTarget !=null && getTarget.layer == 9)
         {
             highlightedObject = getTarget.GetComponent<HighlightedObject>(); 
             highlightedObject/*[0]*/.launchOutliner(); //Allume l'outliner de l'objet actuellement ciblé
