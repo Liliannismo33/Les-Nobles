@@ -22,7 +22,7 @@ public class Door : MonoBehaviour {
 		RaycastHit hit;
             //Debug.Log("Dans la porte pour ouvrir");
             if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door") {
-				gameObject.GetComponent<Animation> ().Play ("DoorOpen");
+				gameObject.GetComponent<Animation>().Play ("DoorOpen");
 				opened = true;
                 //Debug.Log("La porte est ouverte");
 			}
