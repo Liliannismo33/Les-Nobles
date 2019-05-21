@@ -39,10 +39,11 @@ public class InteractionController : MonoBehaviour {
             {
                 if (getTarget.CompareTag("PetiteFille")) // Si le RayCast touche un objet dont le Tag est PetiteFille, alors joue un code précis
                 {
-                    if (stepState == 0) // Si l'étape de l'événement est la première étape...
+                    if (EventManager.s_Singleton.actualStepFirstEvent == 0) // Si l'étape de l'événement est la première étape...
                     {
                         Debug.Log("Passage à l'étape suivante, guignol");
-                        stepState++; // ... alors l'événement passe à l'étape suivante
+                        EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante
+                        Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
                     }
                     else
                     {

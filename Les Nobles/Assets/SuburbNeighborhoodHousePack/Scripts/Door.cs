@@ -4,7 +4,7 @@ using System.Collections;
 public class Door : MonoBehaviour {
 
 	//private float distance;
-	private GameObject player;
+	//private GameObject player;
 	private Ray ray;
 	private bool opened;
 	void Start () {
@@ -20,11 +20,11 @@ public class Door : MonoBehaviour {
 		//distance = Vector3.Distance(transform.position, player.transform.position);
 		ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
 		RaycastHit hit;
-            Debug.Log("Dans la porte pour ouvrir");
+            //Debug.Log("Dans la porte pour ouvrir");
             if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door") {
 				gameObject.GetComponent<Animation> ().Play ("DoorOpen");
 				opened = true;
-                Debug.Log("La porte est ouverte");
+                //Debug.Log("La porte est ouverte");
 			}
 		}
 		else
@@ -32,11 +32,11 @@ public class Door : MonoBehaviour {
 			//distance = Vector3.Distance(transform.position, player.transform.position);
 			ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
 			RaycastHit hit;
-            Debug.Log("Dans la porte pour fermer");
+            //Debug.Log("Dans la porte pour fermer");
             if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2 */&& Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door") {
 				gameObject.GetComponent<Animation> ().Play ("DoorClose");
 				opened = false;
-                Debug.Log("La porte est fermée");
+                //Debug.Log("La porte est fermée");
             }
 		}
 	}
