@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Door : MonoBehaviour {
 
-	private float distance;
+	//private float distance;
 	private GameObject player;
 	private Ray ray;
 	private bool opened;
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player");
+		//player = GameObject.FindGameObjectWithTag ("Player");
 		opened = false;
 	}
 
@@ -17,23 +17,27 @@ public class Door : MonoBehaviour {
 		if (opened == false)
 
 		{
-		distance = Vector3.Distance(transform.position, player.transform.position);
-		ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		//distance = Vector3.Distance(transform.position, player.transform.position);
+		ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
 		RaycastHit hit;
-			if (Input.GetButtonDown ("Fire1") && distance < 2 && Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door") {
+            Debug.Log("Dans la porte pour ouvrir");
+            if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door") {
 				gameObject.GetComponent<Animation> ().Play ("DoorOpen");
 				opened = true;
+                Debug.Log("La porte est ouverte");
 			}
 		}
 		else
 		{
-			distance = Vector3.Distance(transform.position, player.transform.position);
-			ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			//distance = Vector3.Distance(transform.position, player.transform.position);
+			ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
 			RaycastHit hit;
-			if (Input.GetButtonDown ("Fire1") && distance < 2 && Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door") {
+            Debug.Log("Dans la porte pour fermer");
+            if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2 */&& Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door") {
 				gameObject.GetComponent<Animation> ().Play ("DoorClose");
 				opened = false;
-			}
+                Debug.Log("La porte est fermée");
+            }
 		}
 	}
 }
