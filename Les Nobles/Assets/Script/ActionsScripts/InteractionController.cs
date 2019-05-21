@@ -9,7 +9,7 @@ public class InteractionController : MonoBehaviour {
     //public List<HighlightedObject> highlightedObject = new List<HighlightedObject>();
     //public HighlightedObject[] highlightedObject;
     //public ParticleSystem particleSysteme;
-
+    public GameObject key;
     public HighlightedObject highlightedObject; // Variable qui attends le script permettant d'allumer l'outliner
     public GameObject getTarget; // Variable qui attends le GameObject touché par le RayCast
     public int stepState; // État actuel de l'événement
@@ -44,6 +44,7 @@ public class InteractionController : MonoBehaviour {
                         Debug.Log("Passage à l'étape suivante, guignol");
                         EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante
                         Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
+                        key.SetActive(true);
                     }
                     else
                     {
