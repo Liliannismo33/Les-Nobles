@@ -7,6 +7,7 @@ TagManager:
   - PetiteFille
   - Door
   - Key
+  - DoorClosed
   layers:
   - Default
   - TransparentFX

@@ -9,15 +9,29 @@ public class InteractionController : MonoBehaviour {
     //public List<HighlightedObject> highlightedObject = new List<HighlightedObject>();
     //public HighlightedObject[] highlightedObject;
     //public ParticleSystem particleSysteme;
+    public float raycastDistance;
     public GameObject key;
     public HighlightedObject highlightedObject; // Variable qui attends le script permettant d'allumer l'outliner
     public GameObject getTarget; // Variable qui attends le GameObject touché par le RayCast
     public int stepState; // État actuel de l'événement
 
+    public static InteractionController s_Singleton;
+
+    private void Awake()
+    {
+        if (s_Singleton != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            s_Singleton = this;
+        }
+    }
     // Use this for initialization
     void Start () {
         //particleSysteme.Stop();
-        stepState = EventManager.s_Singleton.actualStepFirstEvent; //synchronisation entre état actuel de l'événement ici et le même dans EventManager
+        //stepState = EventManager.s_Singleton.actualStepFirstEvent; //synchronisation entre état actuel de l'événement ici et le même dans EventManager
     }
 	
 	// Update is called once per frame
@@ -45,6 +59,7 @@ public class InteractionController : MonoBehaviour {
                         EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante
                         Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
                         key.SetActive(true);
+                        key = null;
                     }
                     else
                     {
@@ -60,12 +75,12 @@ public class InteractionController : MonoBehaviour {
         }
     }
 
-    private GameObject ReturnSpottedObject()
+    public GameObject ReturnSpottedObject()
     {
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
         
-        if (Physics.Raycast(ray, out hit, 10f))
+        if (Physics.Raycast(ray, out hit, raycastDistance))
         {
             return hit.collider.gameObject;
         }
