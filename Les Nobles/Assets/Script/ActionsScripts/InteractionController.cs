@@ -61,6 +61,12 @@ public class InteractionController : MonoBehaviour {
                         key.SetActive(true);
                         key = null;
                     }
+                    if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est la dernière étape...
+                    {
+                        Debug.Log("Event terminé gg");
+                        EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante (donc terminé)
+                        Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
+                    }
                     else
                     {
                         // ici on souhaite faire parler la petite fille (car le joueur intéragit avec elle)

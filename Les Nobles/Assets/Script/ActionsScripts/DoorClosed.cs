@@ -32,7 +32,7 @@ public class DoorClosed : MonoBehaviour {
 
             if (isLock == false)
             {
-                if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && EventManager.s_Singleton.actualStepFirstEvent >= 3) //getTarget.CompareTag("DoorClosed")/*Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Door"*/)
+                if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("DoorClosed"))//getTarget.CompareTag("DoorClosed")/*Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Door"*/)
                 {
                     InteractionController.s_Singleton.getTarget.GetComponent<Animation>().Play("DoorOpen");
                     opened = true;
@@ -49,7 +49,7 @@ public class DoorClosed : MonoBehaviour {
 
             if (isLock == false)
             {
-                if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2 */&& EventManager.s_Singleton.actualStepFirstEvent >= 3) //getTarget.CompareTag("DoorClosed")/*Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Door"*/)
+                if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2 */&& EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("DoorClosed"))/*Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Door"*/
                 {
                     InteractionController.s_Singleton.getTarget.GetComponent<Animation>().Play("DoorClose");
                     opened = false;
