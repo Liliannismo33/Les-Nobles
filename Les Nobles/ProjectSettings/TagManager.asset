@@ -8,6 +8,7 @@ TagManager:
   - Door
   - Key
   - DoorClosed
+  - DoorMenu
   layers:
   - Default
   - TransparentFX
