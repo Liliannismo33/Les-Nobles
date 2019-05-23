@@ -18,9 +18,8 @@ public class DisjoncteurController : MonoBehaviour {
 
         if (OVRInput.GetDown(OVRInput.Button.One) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("Disjoncteur"))
         {
-            EventManager.s_Singleton.actualStepFirstEvent++;
             lightsOn.SetActive(!lightsOn.activeSelf);
+            EventManager.s_Singleton.actualStepFirstEvent++;
         }
-
     }
 }

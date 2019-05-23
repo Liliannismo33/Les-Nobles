@@ -26,7 +26,7 @@ public class HighlightedObject : MonoBehaviour {
     public void launchOutliner()
     {
         // Fade in constant highlighting
-        h.ConstantOn(Color.yellow);
+        h.ConstantOn(Color.blue);
     }
 
     public void stopOutliner()
