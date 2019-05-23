@@ -15,6 +15,11 @@ public class InteractionController : MonoBehaviour {
     public GameObject getTarget; // Variable qui attends le GameObject touché par le RayCast
     public int stepState; // État actuel de l'événement
 
+    public AudioClip[] mySound;
+    public AudioClip noLightsSound;
+    public AudioClip clefFilleSound;
+    public AudioClip doudouSoundFirst;
+
 
     public static InteractionController s_Singleton;
 
@@ -38,49 +43,66 @@ public class InteractionController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         
-        getTarget = ReturnSpottedObject(); // Actualisation permanente du RayCast
-        if (getTarget !=null && getTarget.layer == 9)
+        if (IntroManager.isIntroEnded == true)
         {
-            highlightedObject = getTarget.GetComponent<HighlightedObject>(); 
-            highlightedObject/*[0]*/.launchOutliner(); //Allume l'outliner de l'objet actuellement ciblé
-            if (getTarget.CompareTag("PetiteFille"))
+            getTarget = ReturnSpottedObject(); // Actualisation permanente du RayCast
+            if (getTarget != null && getTarget.layer == 9)
             {
-                Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 5f);
-                //if (!particleSysteme.isPlaying)
-                    //particleSysteme.Play();
-            }
-            
-            if (OVRInput.GetDown(OVRInput.Button.One))
-            {
-                if (getTarget.CompareTag("PetiteFille")) // Si le RayCast touche un objet dont le Tag est PetiteFille, alors joue un code précis
+                highlightedObject = getTarget.GetComponent<HighlightedObject>();
+                highlightedObject/*[0]*/.launchOutliner(); //Allume l'outliner de l'objet actuellement ciblé
+                if (getTarget.CompareTag("PetiteFille"))
                 {
-                    if (EventManager.s_Singleton.actualStepFirstEvent == 1) // Si l'étape de l'événement est la première étape...
+                    Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 5f);
+                    //if (!particleSysteme.isPlaying)
+                    //particleSysteme.Play();
+                }
+
+                if (OVRInput.GetDown(OVRInput.Button.One))
+                {
+                    if (getTarget.CompareTag("PetiteFille")) // Si le RayCast touche un objet dont le Tag est PetiteFille, alors joue un code précis
                     {
-                        Debug.Log("Passage à l'étape suivante, guignol");
-                        EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante
-                        Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
-                        key.SetActive(true);
-                        key = null;
-                    }
-                    if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est la dernière étape...
-                    {
-                        Debug.Log("Event terminé gg");
-                        EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante (donc terminé)
-                        Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
-                    }
-                    else
-                    {
-                        // ici on souhaite faire parler la petite fille (car le joueur intéragit avec elle)
-                        Debug.Log("Tu parles à la petite fille");
+                        if (EventManager.s_Singleton.actualStepFirstEvent == 1) // Si l'étape de l'événement est la première étape...
+                        {
+                            Debug.Log("Passage à l'étape suivante, guignol");
+                            AudioManager.s_Singleton.PlayClip(clefFilleSound);
+                            EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante
+                            Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
+                            key.SetActive(true);
+                            key = null;
+                        }
+
+                        if (EventManager.s_Singleton.actualStepFirstEvent >= 2 && EventManager.s_Singleton.actualStepFirstEvent <= 3)
+                        {
+                            AudioManager.s_Singleton.PlayClip(noLightsSound);
+                        }
+
+                        if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est la dernière étape...
+                        {
+                            Debug.Log("Event terminé gg");
+                            EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante (donc terminé)
+                            EventManager.s_Singleton.actualStepDoudouEvent++;
+                            AudioManager.s_Singleton.PlayClip(doudouSoundFirst);
+                            Debug.Log("Doudou =" + EventManager.s_Singleton.actualStepDoudouEvent);
+                            Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
+                        }
+
+                        else
+                        {
+                            // ici on souhaite faire parler la petite fille (car le joueur intéragit avec elle)
+                            Debug.Log("Tu parles à la petite fille");
+                            int audioToPlay = Random.Range(0, mySound.Length);
+                            AudioManager.s_Singleton.PlayClip(mySound[audioToPlay]);
+                        }
                     }
                 }
             }
-        }
-        else
-        {
-            highlightedObject/*[0]*/.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
+            else
+            {
+                highlightedObject/*[0]*/.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
+            }
         }
     }
+
 
     public GameObject ReturnSpottedObject()
     {

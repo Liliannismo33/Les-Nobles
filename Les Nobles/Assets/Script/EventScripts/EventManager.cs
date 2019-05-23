@@ -7,6 +7,7 @@ public class EventManager : MonoBehaviour {
     public static EventManager s_Singleton;
 
     public int actualStepFirstEvent = 0;
+    public int actualStepDoudouEvent = 0;
 
     private void Awake()
     {

@@ -8,6 +8,8 @@ public class DisjoncteurController : MonoBehaviour {
 
     public GameObject moonLights;
 
+    public AudioClip mySound;
+
     // Use this for initialization
     void Start () {
 		
@@ -20,6 +22,7 @@ public class DisjoncteurController : MonoBehaviour {
 
         if (OVRInput.GetDown(OVRInput.Button.One) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("Disjoncteur"))
         {
+            AudioManager.s_Singleton.PlayClip(mySound);
             lightsOn.SetActive(!lightsOn.activeSelf);
             moonLights.SetActive(!moonLights.activeSelf);
             EventManager.s_Singleton.actualStepFirstEvent++;
