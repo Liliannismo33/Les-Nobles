@@ -15,6 +15,7 @@ public class InteractionController : MonoBehaviour {
     public GameObject getTarget; // Variable qui attends le GameObject touché par le RayCast
     public int stepState; // État actuel de l'événement
 
+
     public static InteractionController s_Singleton;
 
     private void Awake()

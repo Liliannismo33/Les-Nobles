@@ -6,8 +6,10 @@ public class DisjoncteurController : MonoBehaviour {
 
     public GameObject lightsOn;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject moonLights;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -19,6 +21,7 @@ public class DisjoncteurController : MonoBehaviour {
         if (OVRInput.GetDown(OVRInput.Button.One) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("Disjoncteur"))
         {
             lightsOn.SetActive(!lightsOn.activeSelf);
+            moonLights.SetActive(!moonLights.activeSelf);
             EventManager.s_Singleton.actualStepFirstEvent++;
         }
     }
