@@ -1,4 +1,4 @@
-using UnityEngine; 
+/*using UnityEngine; 
 using UnityEditor;
 
 public class AutoSnap : EditorWindow
@@ -230,4 +230,4 @@ public class AutoSnap : EditorWindow
 		// as we want the snapping to continue when this window is closed
 		//EditorApplication.update -= Update;
 	}
-}
+}*/
