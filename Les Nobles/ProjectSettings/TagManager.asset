@@ -8,6 +8,8 @@ TagManager:
   - Door
   - Key
   - DoorClosed
+  - DoorMenu
+  - Disjoncteur
   layers:
   - Default
   - TransparentFX
