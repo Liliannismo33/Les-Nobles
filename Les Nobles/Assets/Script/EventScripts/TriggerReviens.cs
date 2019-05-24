@@ -32,7 +32,7 @@ public class TriggerReviens : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (EventManager.s_Singleton.actualStepDoudouEvent == 2)
+        if (EventManager.s_Singleton.actualStepDoudouEvent == 1)
         {
             AudioManager.s_Singleton.PlayClip(reviensSound);
             gameObject.GetComponent<Collider>().enabled=false;

@@ -9,6 +9,7 @@ public class Door : MonoBehaviour {
     //public float raycastDistance;
     //private GameObject getTarget;
     private bool opened;
+    public AudioClip openingDoor;
 
     void Start () {
 		//player = GameObject.FindGameObjectWithTag ("Player");
@@ -26,6 +27,7 @@ public class Door : MonoBehaviour {
             //RaycastHit hit;
             //Debug.Log("Dans la porte pour ouvrir");
             if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && InteractionController.s_Singleton.getTarget.CompareTag("Door")/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/) {
+                AudioManager.s_Singleton.PlayClip(openingDoor);
                 InteractionController.s_Singleton.getTarget.GetComponent<Animation>().Play ("DoorOpen");
 				opened = true;
                 //Debug.Log("La porte est ouverte");
@@ -38,6 +40,7 @@ public class Door : MonoBehaviour {
             //RaycastHit hit;
             //Debug.Log("Dans la porte pour fermer");
             if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2 */&& InteractionController.s_Singleton.getTarget.CompareTag("Door")/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/) {
+                AudioManager.s_Singleton.PlayClip(openingDoor);
                 InteractionController.s_Singleton.getTarget.GetComponent<Animation> ().Play ("DoorClose");
 				opened = false;
                 //Debug.Log("La porte est fermée");

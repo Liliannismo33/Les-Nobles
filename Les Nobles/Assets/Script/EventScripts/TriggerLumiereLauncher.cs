@@ -7,7 +7,11 @@ public class TriggerLumiereLauncher : MonoBehaviour {
     public GameObject moonLights;
     public GameObject lightsOff;
     private Light lights;
+    private bool waitForPlaySound = false;
+    private float timerBeforePlay = 0;
 
+
+    public AudioClip extinctionSound;
     public AudioClip mySound;
 
 	// Use this for initialization
@@ -17,16 +21,36 @@ public class TriggerLumiereLauncher : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+
+        if (timerBeforePlay == 2)
+        {
+            AudioManager.s_Singleton.PlayClip(mySound);
+            EventManager.s_Singleton.actualStepFirstEvent++;
+            
+            Debug.Log("Lumière éteinte");
+            Destroy(gameObject);
+        }
+
+        if (waitForPlaySound)
+        {
+            timerBeforePlay += Time.deltaTime;
+
+            if (timerBeforePlay >= 2f)
+            {
+                Debug.Log("timer fini");
+                timerBeforePlay = 2;
+                waitForPlaySound = false;
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        AudioManager.s_Singleton.PlayClip(mySound);
-        EventManager.s_Singleton.actualStepFirstEvent++;
-        lightsOff.SetActive(!lightsOff.activeSelf);
-        moonLights.SetActive(!moonLights.activeSelf);
-        Debug.Log("Lumière éteinte");
-        Destroy(gameObject);
+        lightsOff.SetActive(false);
+        moonLights.SetActive(true);
+        AudioManager.s_Singleton.PlayClip(extinctionSound);
+        waitForPlaySound = true;
+        gameObject.GetComponent<Collider>().enabled = false;
     }
 }

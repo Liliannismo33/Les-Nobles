@@ -71,12 +71,13 @@ public class InteractionController : MonoBehaviour {
                             key = null;
                         }
 
-                        if (EventManager.s_Singleton.actualStepFirstEvent >= 2 && EventManager.s_Singleton.actualStepFirstEvent <= 3)
+
+                        else if (EventManager.s_Singleton.actualStepFirstEvent >= 2 && EventManager.s_Singleton.actualStepFirstEvent <= 3)
                         {
                             AudioManager.s_Singleton.PlayClip(noLightsSound);
                         }
 
-                        if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est la dernière étape...
+                        else if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est la dernière étape...
                         {
                             Debug.Log("Event terminé gg");
                             EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante (donc terminé)

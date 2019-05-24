@@ -19,7 +19,7 @@ public class TriggerDoudou : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other == doudou && EventManager.s_Singleton.actualStepDoudouEvent == 1)
+        if (other.CompareTag("Doudou") && EventManager.s_Singleton.actualStepDoudouEvent == 1)
         {
             AudioManager.s_Singleton.PlayClip(doudouEndSound);
             EventManager.s_Singleton.actualStepDoudouEvent++;

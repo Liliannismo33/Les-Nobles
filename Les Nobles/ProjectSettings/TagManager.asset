@@ -10,6 +10,11 @@ TagManager:
   - DoorClosed
   - DoorMenu
   - Disjoncteur
+  - Doudou
+  - InterrupteurChandelier
+  - "InterrupteurSalle\xE0Manger"
+  - InterrupteurCouloirGarage
+  - InterrupteurHautEscalier
   layers:
   - Default
   - TransparentFX

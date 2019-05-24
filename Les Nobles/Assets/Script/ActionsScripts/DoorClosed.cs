@@ -10,6 +10,8 @@ public class DoorClosed : MonoBehaviour {
     //public float raycastDistance; 
     private bool opened;
     public bool isLock;
+    public AudioClip lockDoorSound;
+    public AudioClip openingDoor;
     //private int stepState;
     //private GameObject getTarget;
 
@@ -25,15 +27,20 @@ public class DoorClosed : MonoBehaviour {
         InteractionController.s_Singleton.getTarget = InteractionController.s_Singleton.ReturnSpottedObject();
         if (opened == false)
         {
-            //distance = Vector3.Distance(transform.position, player.transform.position);
-            //ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-            //RaycastHit hit;
-            //Debug.Log("Dans la porte pour ouvrir");
+            if (isLock == true)
+            {
+                if (OVRInput.GetDown(OVRInput.Button.One) && InteractionController.s_Singleton.getTarget.CompareTag("DoorClosed"))//getTarget.CompareTag("DoorClosed")/*Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Door"*/)
+                {
+                    AudioManager.s_Singleton.PlayClip(lockDoorSound);
+                    //Debug.Log("La porte est ouverte");
+                }
+            }
 
             if (isLock == false)
             {
                 if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && EventManager.s_Singleton.actualStepFirstEvent >= 3 && InteractionController.s_Singleton.getTarget.CompareTag("DoorClosed"))//getTarget.CompareTag("DoorClosed")/*Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Door"*/)
                 {
+                    AudioManager.s_Singleton.PlayClip(openingDoor);
                     InteractionController.s_Singleton.getTarget.GetComponent<Animation>().Play("DoorOpen");
                     opened = true;
                     //Debug.Log("La porte est ouverte");
@@ -51,6 +58,7 @@ public class DoorClosed : MonoBehaviour {
             {
                 if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2 */&& EventManager.s_Singleton.actualStepFirstEvent >= 3 && InteractionController.s_Singleton.getTarget.CompareTag("DoorClosed"))/*Physics.Raycast(ray, out hit) && hit.collider.gameObject.tag == "Door"*/
                 {
+                    AudioManager.s_Singleton.PlayClip(openingDoor);
                     InteractionController.s_Singleton.getTarget.GetComponent<Animation>().Play("DoorClose");
                     opened = false;
                     //Debug.Log("La porte est fermée");
