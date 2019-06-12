@@ -789,7 +789,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967294
   m_IsActive: 1
 --- !u!1 &119268
 GameObject:
@@ -8577,8 +8577,8 @@ MeshRenderer:
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 18f2c004c2eb6c84aaa9565cdb67fa19, type: 2}
@@ -18967,6 +18967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eb5816585aece409e05b98af37dc54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDoor: {fileID: 0}
 --- !u!114 &11460064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18978,6 +18979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eb5816585aece409e05b98af37dc54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDoor: {fileID: 0}
 --- !u!114 &11476548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -18989,6 +18991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eb5816585aece409e05b98af37dc54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDoor: {fileID: 0}
 --- !u!114 &11481764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -19000,6 +19003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eb5816585aece409e05b98af37dc54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openingDoor: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

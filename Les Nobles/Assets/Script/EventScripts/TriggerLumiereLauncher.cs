@@ -10,6 +10,9 @@ public class TriggerLumiereLauncher : MonoBehaviour {
     private bool waitForPlaySound = false;
     private float timerBeforePlay = 0;
 
+    //YANNICK
+    public List<HouseLight> houseLights;
+    //ENDYANNICK
 
     public AudioClip extinctionSound;
     public AudioClip mySound;
@@ -47,7 +50,11 @@ public class TriggerLumiereLauncher : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        lightsOff.SetActive(false);
+
+        foreach (HouseLight hlight in houseLights)
+        {
+            hlight.SwitchOffMyLights();
+        }
         moonLights.SetActive(true);
         AudioManager.s_Singleton.PlayClip(extinctionSound);
         waitForPlaySound = true;
