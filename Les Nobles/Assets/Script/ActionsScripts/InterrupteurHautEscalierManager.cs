@@ -18,7 +18,7 @@ public class InterrupteurHautEscalierManager : MonoBehaviour {
 
         InteractionController.s_Singleton.getTarget = InteractionController.s_Singleton.ReturnSpottedObject();
 
-        if (OVRInput.GetDown(OVRInput.Button.One) && InteractionController.s_Singleton.getTarget.CompareTag("InterrupteurHautEscalier"))
+        if (OVRInput.GetDown(OVRInput.Button.Two) && InteractionController.s_Singleton.getTarget.CompareTag("InterrupteurHautEscalier"))
         {
             AudioManager.s_Singleton.PlayClip(interrupteurSound);
             lightsToTurnOff.SetActive(!lightsToTurnOff.activeSelf);

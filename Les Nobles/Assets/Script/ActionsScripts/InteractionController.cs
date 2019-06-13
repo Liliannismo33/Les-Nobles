@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using HighlightingSystem;
+using UnityEngine.AI;
 
 
 public class InteractionController : MonoBehaviour {
@@ -14,12 +15,13 @@ public class InteractionController : MonoBehaviour {
     public HighlightedObject highlightedObject; // Variable qui attends le script permettant d'allumer l'outliner
     public GameObject getTarget; // Variable qui attends le GameObject touché par le RayCast
     public int stepState; // État actuel de l'événement
-
+    
     public AudioClip[] mySound;
     public AudioClip noLightsSound;
     public AudioClip clefFilleSound;
     public AudioClip doudouSoundFirst;
 
+    //private NavMeshAgent myNMA;
 
     public static InteractionController s_Singleton;
 
@@ -36,6 +38,7 @@ public class InteractionController : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
+        //myNMA = GetComponent<NavMeshAgent>();
         //particleSysteme.Stop();
         //stepState = EventManager.s_Singleton.actualStepFirstEvent; //synchronisation entre état actuel de l'événement ici et le même dans EventManager
     }
@@ -44,7 +47,19 @@ public class InteractionController : MonoBehaviour {
 	void FixedUpdate () {
         
         if (IntroManager.isIntroEnded == true)
-        {
+            {
+                /*Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+                RaycastHit yes;
+                if (Physics.Raycast(ray, out yes, 10f))
+                {
+                    //Debug.Log(gameObject.name);
+                    if (OVRInput.GetDown(OVRInput.Button.Two))
+                    {
+                        myNMA.destination = yes.point;
+                        Debug.Log(myNMA.destination);
+                    }
+                }*/
+
             getTarget = ReturnSpottedObject(); // Actualisation permanente du RayCast
             if (getTarget != null && getTarget.layer == 9)
             {
@@ -57,7 +72,7 @@ public class InteractionController : MonoBehaviour {
                     //particleSysteme.Play();
                 }
 
-                if (OVRInput.GetDown(OVRInput.Button.One))
+                if (OVRInput.GetDown(OVRInput.Button.Two))
                 {
                     if (getTarget.CompareTag("PetiteFille")) // Si le RayCast touche un objet dont le Tag est PetiteFille, alors joue un code précis
                     {

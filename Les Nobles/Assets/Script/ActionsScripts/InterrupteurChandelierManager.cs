@@ -5,8 +5,8 @@ using UnityEngine;
 public class InterrupteurChandelierManager : MonoBehaviour {
 
     public AudioClip interrupteurSound;
-    public GameObject lightsToTurnOff;
-    public GameObject lightsToTurnOff01;
+    public Light lightsToTurnOff;
+    public Light lightsToTurnOff01;
 
     // Use this for initialization
     void Start () {
@@ -18,11 +18,11 @@ public class InterrupteurChandelierManager : MonoBehaviour {
 
         InteractionController.s_Singleton.getTarget = InteractionController.s_Singleton.ReturnSpottedObject();
 
-        if (OVRInput.GetDown(OVRInput.Button.One) && InteractionController.s_Singleton.getTarget.CompareTag("InterrupteurChandelier"))
+        if (OVRInput.GetDown(OVRInput.Button.Two) && InteractionController.s_Singleton.getTarget.CompareTag("InterrupteurChandelier"))
         {
             AudioManager.s_Singleton.PlayClip(interrupteurSound);
-            lightsToTurnOff.SetActive(!lightsToTurnOff.activeSelf);
-            lightsToTurnOff01.SetActive(!lightsToTurnOff01.activeSelf);
+            //lightsToTurnOff.SetActive(!lightsToTurnOff.activeSelf);
+            //lightsToTurnOff01.SetActive(!lightsToTurnOff01.activeSelf);
         }
 
     }

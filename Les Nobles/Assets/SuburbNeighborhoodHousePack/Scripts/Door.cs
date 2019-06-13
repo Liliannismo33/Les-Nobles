@@ -26,7 +26,7 @@ public class Door : MonoBehaviour {
             //ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
             //RaycastHit hit;
             //Debug.Log("Dans la porte pour ouvrir");
-            if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2*/ && InteractionController.s_Singleton.getTarget.CompareTag("Door")/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/) {
+            if (OVRInput.GetDown(OVRInput.Button.Two) /*&& distance < 2*/ && InteractionController.s_Singleton.getTarget.CompareTag("Door")/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/) {
                 AudioManager.s_Singleton.PlayClip(openingDoor);
                 InteractionController.s_Singleton.getTarget.GetComponent<Animation>().Play ("DoorOpen");
 				opened = true;
@@ -39,7 +39,7 @@ public class Door : MonoBehaviour {
             //ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
             //RaycastHit hit;
             //Debug.Log("Dans la porte pour fermer");
-            if (OVRInput.GetDown(OVRInput.Button.One) /*&& distance < 2 */&& InteractionController.s_Singleton.getTarget.CompareTag("Door")/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/) {
+            if (OVRInput.GetDown(OVRInput.Button.Two) /*&& distance < 2 */&& InteractionController.s_Singleton.getTarget.CompareTag("Door")/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/) {
                 AudioManager.s_Singleton.PlayClip(openingDoor);
                 InteractionController.s_Singleton.getTarget.GetComponent<Animation> ().Play ("DoorClose");
 				opened = false;

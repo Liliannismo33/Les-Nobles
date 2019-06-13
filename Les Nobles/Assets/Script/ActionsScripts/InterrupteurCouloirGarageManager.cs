@@ -17,7 +17,7 @@ public class InterrupteurCouloirGarageManager : MonoBehaviour {
 
         InteractionController.s_Singleton.getTarget = InteractionController.s_Singleton.ReturnSpottedObject();
 
-        if (OVRInput.GetDown(OVRInput.Button.One) && InteractionController.s_Singleton.getTarget.CompareTag("InterrupteurCouloirGarage"))
+        if (OVRInput.GetDown(OVRInput.Button.Two) && InteractionController.s_Singleton.getTarget.CompareTag("InterrupteurCouloirGarage"))
         {
             AudioManager.s_Singleton.PlayClip(interrupteurSound);
             lightsToTurnOff.SetActive(!lightsToTurnOff.activeSelf);

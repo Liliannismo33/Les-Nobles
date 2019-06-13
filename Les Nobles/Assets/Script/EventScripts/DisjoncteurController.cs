@@ -21,7 +21,7 @@ public class DisjoncteurController : MonoBehaviour {
 
         InteractionController.s_Singleton.getTarget = InteractionController.s_Singleton.ReturnSpottedObject();
 
-        if (OVRInput.GetDown(OVRInput.Button.One) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("Disjoncteur"))
+        if (OVRInput.GetDown(OVRInput.Button.Two) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("Disjoncteur"))
         {
             AudioManager.s_Singleton.PlayClip(rallumageSound);
             AudioManager.s_Singleton.PlayClip(mySound);
