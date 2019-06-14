@@ -22,15 +22,14 @@ public class DisjoncteurController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        InteractionController.s_Singleton.getTarget = InteractionController.s_Singleton.ReturnSpottedObject();
-
-        if (OVRInput.GetDown(OVRInput.Button.Two) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("Disjoncteur"))
+        if (OVRInput.GetDown(OVRInput.Button.Two) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget == gameObject)
         {
             foreach (HouseLight hlight in houseLights)
             {
                 hlight.SwitchOnMyLights();
             }
             //moonLights.SetActive(false);
+            EventManager.s_Singleton.powerOff = false;
             EventManager.s_Singleton.actualStepFirstEvent++;
             AudioManager.s_Singleton.PlayClip(rallumageSound);
             AudioManager.s_Singleton.PlayClip(mySound);

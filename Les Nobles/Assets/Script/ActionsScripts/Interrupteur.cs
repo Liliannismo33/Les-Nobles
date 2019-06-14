@@ -6,6 +6,8 @@ public class Interrupteur : MonoBehaviour {
 
     public AudioClip interrupteurSound;
     public List<HouseLight> houseLights;
+    private bool canBeUsed = false;
+
 
     // Use this for initialization
     void Start () {
@@ -15,9 +17,7 @@ public class Interrupteur : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        InteractionController.s_Singleton.getTarget = InteractionController.s_Singleton.ReturnSpottedObject();
-
-        if (OVRInput.GetDown(OVRInput.Button.Two) && InteractionController.s_Singleton.getTarget.CompareTag("Interrupteur") && EventManager.s_Singleton.actualStepFirstEvent != 1 && EventManager.s_Singleton.actualStepFirstEvent != 2 && EventManager.s_Singleton.actualStepFirstEvent != 3)
+        if (OVRInput.GetDown(OVRInput.Button.Two) && !EventManager.s_Singleton.powerOff && canBeUsed)
         {
             AudioManager.s_Singleton.PlayClip(interrupteurSound);
 
@@ -29,4 +29,22 @@ public class Interrupteur : MonoBehaviour {
             //lightsToTurnOff01.SetActive(!lightsToTurnOff01.activeSelf);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("InteractionHand"))
+        {
+            canBeUsed = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("InteractionHand"))
+        {
+            canBeUsed = false;
+        }
+    }
+
+
 }

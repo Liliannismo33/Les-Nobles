@@ -8,6 +8,8 @@ public class EventManager : MonoBehaviour {
 
     public int actualStepFirstEvent = 0;
     public int actualStepDoudouEvent = 0;
+    public bool powerOff = false;
+
 
     private void Awake()
     {
@@ -29,5 +31,15 @@ public class EventManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+    }
+
+    public void SetpowerOff()
+    {
+        powerOff = true;
+    }
+
+    public void SetPowerOn()
+    {
+        powerOff = false;
     }
 }

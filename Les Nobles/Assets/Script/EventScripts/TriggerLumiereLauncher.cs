@@ -55,6 +55,7 @@ public class TriggerLumiereLauncher : MonoBehaviour {
         {
             hlight.SwitchOffMyLights();
         }
+        EventManager.s_Singleton.powerOff = true;
         moonLights.SetActive(true);
         AudioManager.s_Singleton.PlayClip(extinctionSound);
         waitForPlaySound = true;

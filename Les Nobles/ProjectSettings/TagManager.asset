@@ -16,6 +16,7 @@ TagManager:
   - InterrupteurCouloirGarage
   - InterrupteurHautEscalier
   - Interrupteur
+  - InteractionHand
   layers:
   - Default
   - TransparentFX
