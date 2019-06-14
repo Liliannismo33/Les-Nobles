@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class DisjoncteurController : MonoBehaviour {
 
-    public GameObject lightsOn;
+    //public GameObject lightsOn;
 
     public GameObject moonLights;
 
     public AudioClip mySound;
     public AudioClip rallumageSound;
 
+    public List<HouseLight> houseLights;
+
+
     // Use this for initialization
     void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,11 +26,14 @@ public class DisjoncteurController : MonoBehaviour {
 
         if (OVRInput.GetDown(OVRInput.Button.Two) && EventManager.s_Singleton.actualStepFirstEvent == 3 && InteractionController.s_Singleton.getTarget.CompareTag("Disjoncteur"))
         {
+            foreach (HouseLight hlight in houseLights)
+            {
+                hlight.SwitchOnMyLights();
+            }
+            //moonLights.SetActive(false);
+            EventManager.s_Singleton.actualStepFirstEvent++;
             AudioManager.s_Singleton.PlayClip(rallumageSound);
             AudioManager.s_Singleton.PlayClip(mySound);
-            lightsOn.SetActive(true);
-            moonLights.SetActive(false);
-            EventManager.s_Singleton.actualStepFirstEvent++;
         }
     }
 }

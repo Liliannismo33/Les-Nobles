@@ -15,6 +15,7 @@ TagManager:
   - "InterrupteurSalle\xE0Manger"
   - InterrupteurCouloirGarage
   - InterrupteurHautEscalier
+  - Interrupteur
   layers:
   - Default
   - TransparentFX

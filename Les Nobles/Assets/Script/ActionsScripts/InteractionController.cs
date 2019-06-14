@@ -67,7 +67,7 @@ public class InteractionController : MonoBehaviour {
                 highlightedObject/*[0]*/.launchOutliner(); //Allume l'outliner de l'objet actuellement ciblé
                 if (getTarget.CompareTag("PetiteFille"))
                 {
-                    Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 5f);
+                    //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 5f);
                     //if (!particleSysteme.isPlaying)
                     //particleSysteme.Play();
                 }

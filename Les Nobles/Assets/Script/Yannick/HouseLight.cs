@@ -31,4 +31,12 @@ public class HouseLight : MonoBehaviour {
             myL.enabled = false;
         }
     }
+
+    public void SwitchLightState()
+    {
+        foreach(Light myL in myLights)
+        {
+            myL.enabled = !myL.enabled;
+        }
+    }
 }
