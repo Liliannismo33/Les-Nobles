@@ -35,19 +35,19 @@ public class Door : MonoBehaviour {
                 //Debug.Log("La porte est ouverte");
 			}
 		}
-		else
+		/*else
 		{
             //distance = Vector3.Distance(transform.position, player.transform.position);
             //ray = new Ray (Camera.main.transform.position, Camera.main.transform.forward);
             //RaycastHit hit;
             //Debug.Log("Dans la porte pour fermer");
-            if (OVRInput.GetDown(OVRInput.Button.Two) && canBeUsed)/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/ {
+            if (OVRInput.GetDown(OVRInput.Button.Two) && canBeUsed)/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door" {
                 AudioManager.s_Singleton.PlayClip(openingDoor);
                 myAnims.Play("DoorClose");
 				opened = false;
                 //Debug.Log("La porte est fermée");
             }
-		}
+		}*/
 
     }
 
