@@ -8,7 +8,7 @@ public class Door : MonoBehaviour {
     //private Ray ray;
     //public float raycastDistance;
     //private GameObject getTarget;
-    private Animation myAnims;
+    public Animation myAnims;
     private bool opened;
     public AudioClip openingDoor;
     private bool canBeUsed = false;
@@ -16,7 +16,7 @@ public class Door : MonoBehaviour {
 
     void Start () {
         //player = GameObject.FindGameObjectWithTag ("Player");
-        myAnims = GetComponent<Animation>();
+       // myAnims = GetComponent<Animation>();
 		opened = false;
 	}
 
@@ -30,7 +30,7 @@ public class Door : MonoBehaviour {
             //Debug.Log("Dans la porte pour ouvrir");
             if (OVRInput.GetDown(OVRInput.Button.Two) && canBeUsed)/*Physics.Raycast (ray, out hit) && hit.collider.gameObject.tag == "Door"*/ {
                 AudioManager.s_Singleton.PlayClip(openingDoor);
-                myAnims.Play ("DoorOpen");
+                myAnims.Play("DoorOpen");
 				opened = true;
                 //Debug.Log("La porte est ouverte");
 			}
@@ -63,6 +63,7 @@ public class Door : MonoBehaviour {
     {
         if (other.CompareTag("InteractionHand"))
         {
+            Debug.Log("Tu peux ouvrir la porte");
             canBeUsed = true;
         }
     }
