@@ -64,7 +64,11 @@ public class InteractionController : MonoBehaviour {
             if (getTarget != null && getTarget.layer == 9)
             {
                 highlightedObject = getTarget.GetComponent<HighlightedObject>();
-                highlightedObject/*[0]*/.launchOutliner(); //Allume l'outliner de l'objet actuellement ciblé
+                if (highlightedObject != null)
+                {
+                    highlightedObject/*[0]*/.launchOutliner(); //Allume l'outliner de l'objet actuellement ciblé
+                }
+                
                 if (getTarget.CompareTag("PetiteFille"))
                 {
                     //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 5f);
@@ -114,7 +118,10 @@ public class InteractionController : MonoBehaviour {
             }
             else
             {
-                highlightedObject/*[0]*/.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
+                if (highlightedObject != null)
+                {
+                    highlightedObject/*[0]*/.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
+                }
             }
         }
     }

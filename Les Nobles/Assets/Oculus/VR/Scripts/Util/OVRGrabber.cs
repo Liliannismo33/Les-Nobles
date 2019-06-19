@@ -371,4 +371,9 @@ public class OVRGrabber : MonoBehaviour
             GrabbableRelease(Vector3.zero, Vector3.zero);
         }
     }
+
+    public OVRInput.Controller GetController ()
+    {
+        return m_controller;
+    }
 }
