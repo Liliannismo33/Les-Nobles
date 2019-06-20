@@ -12,6 +12,7 @@ public class DoorVR : MonoBehaviour
     private Vector3 handPosition;
     public float rotationSpeed = 1f;
     private Transform handle;
+    public bool isLock;
 
     private void Start()
     {
@@ -20,46 +21,51 @@ public class DoorVR : MonoBehaviour
 
     private void HandHoverUpdate()
     {
-        if (interactionHand != null)
+        if (!isLock)
         {
-            if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) > 0.55f && !holdingHandle)
+            if (interactionHand != null)
             {
-                grabPosition = interactionHand.transform.position;
-                holdingHandle = true;
+                if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) > 0.55f && !holdingHandle)
+                {
+                    grabPosition = interactionHand.transform.position;
+                    holdingHandle = true;
+                }
+                else if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) < 0.35f && holdingHandle)
+                {
+                    interactionHand = null;
+                    holdingHandle = false;
+                }
             }
-            else if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) < 0.35f && holdingHandle)
-            {
-                interactionHand = null;
-                holdingHandle = false;
-            }
-        }
-        
+        }        
     }
 
     void Update()
     {
         HandHoverUpdate();
-        if (holdingHandle)
+        if (!isLock)
         {
-            handPosition = interactionHand.transform.position;
-            Vector3 currentForward = transform.forward;
-            currentForward.y = 0f;
-            currentForward.Normalize();
+            if (holdingHandle)
+            {
+                handPosition = interactionHand.transform.position;
+                Vector3 currentForward = transform.forward;
+                currentForward.y = 0f;
+                currentForward.Normalize();
 
-            Vector3 targetForward = handPosition - transform.position;
-            targetForward.y = 0f;
-            targetForward.Normalize();
+                Vector3 targetForward = handPosition - transform.position;
+                targetForward.y = 0f;
+                targetForward.Normalize();
 
-            transform.forward = targetForward;
+                transform.forward = targetForward;
 
 
-            /*Quaternion testRot = Quaternion.FromToRotation(currentForward, targetForward);
-            transform.rotation = Quaternion.Lerp(transform.rotation, testRot, rotationSpeed * Time.deltaTime);*/
-        }
+                /*Quaternion testRot = Quaternion.FromToRotation(currentForward, targetForward);
+                transform.rotation = Quaternion.Lerp(transform.rotation, testRot, rotationSpeed * Time.deltaTime);*/
+            }
 
-        if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) > 0.55f)
-        {
-            Debug.Log(interactionHand.transform.position);
+            if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) > 0.55f)
+            {
+                Debug.Log(interactionHand.transform.position);
+            }
         }
     }
 
@@ -68,6 +74,12 @@ public class DoorVR : MonoBehaviour
         if (other.CompareTag("InteractionHand"))
         {
             interactionHand = other.GetComponent<OVRGrabber>();
+        }
+        if (other.CompareTag("Key"))
+        {
+            isLock = false;
+            EventManager.s_Singleton.actualStepFirstEvent++;
+            Destroy(other.gameObject);
         }
     }
 
