@@ -21,14 +21,15 @@ public class TriggerPhoneRing : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("In Trigger");
+        //Jouer la sonnerie du téléphone, faire clignoter la lumière du téléphone, détruire le trigger.
         phoneLight.GetComponent<Light>().intensity = 6;
         phoneLight.GetComponent<Light>().color = color01;
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Out Trigger");
-        phoneLight.GetComponent<Light>().intensity = 1;
-        phoneLight.GetComponent<Light>().color = color02;
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    Debug.Log("Out Trigger");
+    //    phoneLight.GetComponent<Light>().intensity = 1;
+    //    phoneLight.GetComponent<Light>().color = color02;
+    //}
 }
