@@ -5,7 +5,10 @@ using UnityEngine;
 public class TriggerLumiereLauncher : MonoBehaviour {
 
     public GameObject moonLights;
-    public GameObject lightsOff;
+    public GameObject triggerThunder;
+    public GameObject hlight;
+
+    //public GameObject lightsOff;
     private Light lights;
     private bool waitForPlaySound = false;
     private float timerBeforePlay = 0;
@@ -19,7 +22,7 @@ public class TriggerLumiereLauncher : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        lights = lightsOff.GetComponent<Light>();
+        //lights = lightsOff.GetComponent<Light>();
 	}
 	
 	// Update is called once per frame
@@ -55,10 +58,25 @@ public class TriggerLumiereLauncher : MonoBehaviour {
         {
             hlight.SwitchOffMyLights();
         }
+        StartCoroutine(HlightEnabler());
+        triggerThunder.SetActive(true);
         EventManager.s_Singleton.powerOff = true;
         moonLights.SetActive(true);
         AudioManager.s_Singleton.PlayClip(extinctionSound);
         waitForPlaySound = true;
         gameObject.GetComponent<Collider>().enabled = false;
+    }
+
+    IEnumerator HlightEnabler()
+    {
+        hlight.SetActive(true);
+        yield return new WaitForSeconds(0.05f);
+        hlight.SetActive(false);
+
+        yield return new WaitForSeconds(0.05f);
+
+        hlight.SetActive(true);
+        yield return new WaitForSeconds(0.05f);
+        hlight.SetActive(false);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class DisjoncteurController : MonoBehaviour {
 
     private bool canBeUsed = false;
+    public GameObject triggerThunder;
 
     [Header ("Sons")]
 
@@ -32,6 +33,7 @@ public class DisjoncteurController : MonoBehaviour {
             {
                 hlight.SwitchOnMyLights(); // Active la fonction SwitchOnMyLights() dans hlight
             }
+            triggerThunder.SetActive(true);
             EventManager.s_Singleton.powerOff = false;
             EventManager.s_Singleton.actualStepFirstEvent++;
             AudioManager.s_Singleton.PlayClip(rallumageSound);
