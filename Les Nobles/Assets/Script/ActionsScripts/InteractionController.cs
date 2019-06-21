@@ -7,21 +7,26 @@ using UnityEngine.AI;
 
 public class InteractionController : MonoBehaviour {
 
-    //public List<HighlightedObject> highlightedObject = new List<HighlightedObject>();
-    //public HighlightedObject[] highlightedObject;
-    //public ParticleSystem particleSysteme;
-    public float raycastDistance;
-    public GameObject key;
-    public HighlightedObject highlightedObject; // Variable qui attends le script permettant d'allumer l'outliner
-    public GameObject getTarget; // Variable qui attends le GameObject touché par le RayCast
-    public int stepState; // État actuel de l'événement
-    
-    public AudioClip[] mySound;
-    public AudioClip noLightsSound;
-    public AudioClip clefFilleSound;
-    public AudioClip doudouSoundFirst;
+    [Header ("Raycast")]
 
-    //private NavMeshAgent myNMA;
+    public float raycastDistance; // Variable déterminant la longeur du Raycast
+    public GameObject getTarget; // Variable qui stock le GameObject touché par le RayCast
+    public HighlightedObject highlightedObject; // Variable qui attends le script permettant d'allumer l'outliner
+
+    [Space]
+
+    [Header("Sons")]
+
+    public AudioClip[] mySound; // Tableau renseignant toutes les voice-lanes de la petite fille hors évenement
+    public AudioClip noLightsSound; // La petite fille se plaind qu'il fait noir
+    public AudioClip clefFilleSound; // La petite fille indique où se trouve la clé et ce que le joueur doit en faire
+    public AudioClip doudouSoundFirst; // La petite fille demande son doudou
+
+    [Space]
+    [Space]
+
+    public GameObject key;
+    public int stepState; // État actuel de l'événement
 
     public static InteractionController s_Singleton;
 
@@ -38,80 +43,68 @@ public class InteractionController : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        //myNMA = GetComponent<NavMeshAgent>();
-        //particleSysteme.Stop();
-        //stepState = EventManager.s_Singleton.actualStepFirstEvent; //synchronisation entre état actuel de l'événement ici et le même dans EventManager
+
     }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
         
-        if (IntroManager.isIntroEnded == true)
+        if (IntroManager.isIntroEnded == true) // Si l'introduction est terminée, alors...
             {
                 /*Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
                 RaycastHit yes;
                 if (Physics.Raycast(ray, out yes, 10f))
                 {
-                    //Debug.Log(gameObject.name);
                     if (OVRInput.GetDown(OVRInput.Button.Two))
                     {
                         myNMA.destination = yes.point;
-                        Debug.Log(myNMA.destination);
                     }
                 }*/
 
             getTarget = ReturnSpottedObject(); // Actualisation permanente du RayCast
-            if (getTarget != null && getTarget.layer == 9)
+            if (getTarget != null && getTarget.layer == 9) // Si le RayCast renseigne un objet et que celui-ci est sur le layer 9 (InteractiveObject), alors...
             {
-                highlightedObject = getTarget.GetComponent<HighlightedObject>();
-                if (highlightedObject != null)
+                highlightedObject = getTarget.GetComponent<HighlightedObject>(); // ... On récupère le composant permettant l'activation de l'Highliner
+                if (highlightedObject != null) // Si il y a un composant HiglightedObject sur l'objet renseigné par le RayCast, alors...
                 {
-                    highlightedObject/*[0]*/.launchOutliner(); //Allume l'outliner de l'objet actuellement ciblé
+                    highlightedObject/*[0]*/.launchOutliner(); // Allume l'outliner de l'objet actuellement ciblé
                 }
                 
-                if (getTarget.CompareTag("PetiteFille"))
-                {
-                    //Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward, Color.red, 5f);
-                    //if (!particleSysteme.isPlaying)
-                    //particleSysteme.Play();
-                }
+                //if (getTarget.CompareTag("PetiteFille")) // Si l'objet touché porte le tag PetiteFille, alors...
+                //{
+                //    //if (!particleSysteme.isPlaying)
+                //    //particleSysteme.Play();
+                //}
 
-                if (OVRInput.GetDown(OVRInput.Button.Two))
+                if (OVRInput.GetDown(OVRInput.Button.Two)) // Si on appuie sur la touche n°2 du controller, alors...
                 {
-                    if (getTarget.CompareTag("PetiteFille")) // Si le RayCast touche un objet dont le Tag est PetiteFille, alors joue un code précis
+                    if (getTarget.CompareTag("PetiteFille")) // Si l'objet touché porte le tag PetiteFille, alors...
                     {
-                        if (EventManager.s_Singleton.actualStepFirstEvent == 1) // Si l'étape de l'événement est la première étape...
+                        if (EventManager.s_Singleton.actualStepFirstEvent == 1) // Si l'étape de l'événement est l'étape n°1, alors...
                         {
-                            Debug.Log("Passage à l'étape suivante, guignol");
-                            AudioManager.s_Singleton.PlayClip(clefFilleSound);
-                            EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante
-                            Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
-                            key.SetActive(true);
+                            AudioManager.s_Singleton.PlayClip(clefFilleSound); // Joue le son renseigné en appelant la fonction PlayClip dans la classe AudioManager
+                            EventManager.s_Singleton.actualStepFirstEvent++; // L'événement passe à l'étape suivante
+                            key.SetActive(true); // Fait apparaître le GameObject key
                             key = null;
                         }
 
 
-                        else if (EventManager.s_Singleton.actualStepFirstEvent >= 2 && EventManager.s_Singleton.actualStepFirstEvent <= 3)
+                        else if (EventManager.s_Singleton.actualStepFirstEvent == 2 || EventManager.s_Singleton.actualStepFirstEvent == 3) // Si l'etape de l'évenement est à l'étape n°2 ou n°3, alors...
                         {
                             AudioManager.s_Singleton.PlayClip(noLightsSound);
                         }
 
-                        else if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est la dernière étape...
+                        else if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est l'étape 4, alors...
                         {
-                            Debug.Log("Event terminé gg");
-                            EventManager.s_Singleton.actualStepFirstEvent++; // ... alors l'événement passe à l'étape suivante (donc terminé)
-                            EventManager.s_Singleton.actualStepDoudouEvent++;
+                            EventManager.s_Singleton.actualStepFirstEvent++; // L'événement passe à l'étape suivante (donc terminé dans ce cas)
+                            EventManager.s_Singleton.actualStepDoudouEvent++; // L'événement DoudouEvent passe à l'étape suivante
                             AudioManager.s_Singleton.PlayClip(doudouSoundFirst);
-                            Debug.Log("Doudou =" + EventManager.s_Singleton.actualStepDoudouEvent);
-                            Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
                         }
 
                         else
                         {
-                            // ici on souhaite faire parler la petite fille (car le joueur intéragit avec elle)
-                            Debug.Log("Tu parles à la petite fille");
-                            int audioToPlay = Random.Range(0, mySound.Length);
-                            AudioManager.s_Singleton.PlayClip(mySound[audioToPlay]);
+                            int audioToPlay = Random.Range(0, mySound.Length); // On attribue à une variable int une valeur aléatoire comprise entre l'index 0 et l'index maximum du tableau mySound
+                            AudioManager.s_Singleton.PlayClip(mySound[audioToPlay]); // On joue le son correspondant à l'index du tableau attribué à l'int audioToPlay
                         }
                     }
                 }
@@ -120,22 +113,22 @@ public class InteractionController : MonoBehaviour {
             {
                 if (highlightedObject != null)
                 {
-                    highlightedObject/*[0]*/.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
+                    highlightedObject.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
                 }
             }
         }
     }
 
 
-    public GameObject ReturnSpottedObject()
+    public GameObject ReturnSpottedObject() // Fonction qui gère le RayCast
     {
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward); // Création du Raycast qui part de la caméra et va en avant
         RaycastHit hit;
         
-        if (Physics.Raycast(ray, out hit, raycastDistance))
+        if (Physics.Raycast(ray, out hit, raycastDistance)) // Si le RayCast touche quelque chose, alors...
         {
-            return hit.collider.gameObject;
+            return hit.collider.gameObject; // Retourne l'info du GameObject touché
         }
-        return null;
+        return null; // Ne retourne rien si le RayCast ne touche rien
     }
 }
