@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class TriggerPhoneRing : MonoBehaviour {
 
-    public Light phoneLight;
+    public Light phoneLightRDC;
+    public Light phoneLightEtage;
     public Color color01 = Color.green;
     private Color color02;
 
     // Use this for initialization
     void Start () {
-        color02 = phoneLight.GetComponent<Light>().color;
+        color02 = phoneLightEtage.GetComponent<Light>().color;
+
+        color02 = phoneLightEtage.GetComponent<Light>().color;
     }
 
     // Update is called once per frame
@@ -22,8 +25,11 @@ public class TriggerPhoneRing : MonoBehaviour {
     {
         Debug.Log("In Trigger");
         //Jouer la sonnerie du téléphone, faire clignoter la lumière du téléphone, détruire le trigger.
-        phoneLight.GetComponent<Light>().intensity = 6;
-        phoneLight.GetComponent<Light>().color = color01;
+        phoneLightRDC.GetComponent<Light>().intensity = 6;
+        phoneLightRDC.GetComponent<Light>().color = color01;
+
+        phoneLightEtage.GetComponent<Light>().intensity = 6;
+        phoneLightEtage.GetComponent<Light>().color = color01;
     }
 
     //private void OnTriggerExit(Collider other)

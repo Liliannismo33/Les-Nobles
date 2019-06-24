@@ -62,10 +62,10 @@ public class DoorVR : MonoBehaviour
                 transform.rotation = Quaternion.Lerp(transform.rotation, testRot, rotationSpeed * Time.deltaTime);*/
             }
 
-            if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) > 0.55f)
-            {
-                Debug.Log(interactionHand.transform.position);
-            }
+            //if (OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, interactionHand.GetController()) > 0.55f)
+            //{
+            //    //Debug.Log(interactionHand.transform.position);
+            //}
         }
     }
 
@@ -79,7 +79,7 @@ public class DoorVR : MonoBehaviour
         {
             isLock = false;
             EventManager.s_Singleton.actualStepFirstEvent++;
-            Destroy(other.gameObject);
+            Destroy(GameObject.Find("Key"));
         }
     }
 
