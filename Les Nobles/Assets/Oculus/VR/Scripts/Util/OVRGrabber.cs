@@ -223,6 +223,10 @@ public class OVRGrabber : MonoBehaviour
 
             for (int j = 0; j < grabbable.grabPoints.Length; ++j)
             {
+                if (grabbable == null)
+                {
+                    continue;
+                }
                 Collider grabbableCollider = grabbable.grabPoints[j];
                 // Store the closest grabbable
                 Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);

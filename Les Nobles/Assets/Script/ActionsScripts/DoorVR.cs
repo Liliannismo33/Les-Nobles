@@ -79,7 +79,7 @@ public class DoorVR : MonoBehaviour
         {
             isLock = false;
             EventManager.s_Singleton.actualStepFirstEvent++;
-            Destroy(GameObject.Find("Key"));
+            Destroy(other.gameObject, 0.05f);
         }
     }
 
