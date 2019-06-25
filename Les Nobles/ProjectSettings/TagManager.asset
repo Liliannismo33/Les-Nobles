@@ -18,6 +18,7 @@ TagManager:
   - Interrupteur
   - InteractionHand
   - Peinture
+  - DessinEvent
   layers:
   - Default
   - TransparentFX

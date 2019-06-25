@@ -11,7 +11,7 @@ public class InteractionController : MonoBehaviour {
 
     public float raycastDistance; // Variable déterminant la longeur du Raycast
     public GameObject getTarget; // Variable qui stock le GameObject touché par le RayCast
-    public HighlightedObject highlightedObject; // Variable qui attends le script permettant d'allumer l'outliner
+    // HighlightedObject highlightedObject; // Variable qui attends le script permettant d'allumer l'outliner
 
     [Space]
 
@@ -51,24 +51,37 @@ public class InteractionController : MonoBehaviour {
         
         if (IntroManager.isIntroEnded == true) // Si l'introduction est terminée, alors...
             {
-                /*Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-                RaycastHit yes;
-                if (Physics.Raycast(ray, out yes, 10f))
+
+            if (EventManager.s_Singleton.actualStepArmoireEvent == 1)
+            {
+                //JOUER SON PETITE FILLE DEMANDANT DE VENIR
+            }
+
+            /*Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            RaycastHit yes;
+            if (Physics.Raycast(ray, out yes, 10f))
+            {
+                if (OVRInput.GetDown(OVRInput.Button.Two))
                 {
-                    if (OVRInput.GetDown(OVRInput.Button.Two))
-                    {
-                        myNMA.destination = yes.point;
-                    }
-                }*/
+                    myNMA.destination = yes.point;
+                }
+            }*/
 
             getTarget = ReturnSpottedObject(); // Actualisation permanente du RayCast
-            if (getTarget != null && getTarget.layer == 9) // Si le RayCast renseigne un objet et que celui-ci est sur le layer 9 (InteractiveObject), alors...
+            if (getTarget != null) // Si le RayCast renseigne un objet et que celui-ci est sur le layer 9 (InteractiveObject), alors...
             {
-                highlightedObject = getTarget.GetComponent<HighlightedObject>(); // ... On récupère le composant permettant l'activation de l'Highliner
-                if (highlightedObject != null) // Si il y a un composant HiglightedObject sur l'objet renseigné par le RayCast, alors...
+                if (getTarget.CompareTag("DessinEvent") && EventManager.s_Singleton.actualStepArmoireEvent < 1)
                 {
-                    highlightedObject/*[0]*/.launchOutliner(); // Allume l'outliner de l'objet actuellement ciblé
+                    EventManager.s_Singleton.actualStepArmoireEvent++;
+                    //Debug.Log(EventManager.s_Singleton.actualStepArmoireEvent);
+                    //return;
                 }
+
+                //highlightedObject = getTarget.GetComponent<HighlightedObject>(); // ... On récupère le composant permettant l'activation de l'Highliner
+                //if (highlightedObject != null) // Si il y a un composant HiglightedObject sur l'objet renseigné par le RayCast, alors...
+                //{
+                //    highlightedObject/*[0]*/.launchOutliner(); // Allume l'outliner de l'objet actuellement ciblé
+                //}
                 
                 //if (getTarget.CompareTag("PetiteFille")) // Si l'objet touché porte le tag PetiteFille, alors...
                 //{
@@ -77,7 +90,7 @@ public class InteractionController : MonoBehaviour {
                 //}
 
                 if (OVRInput.GetDown(OVRInput.Button.Two)) // Si on appuie sur la touche n°2 du controller, alors...
-                {
+                {                   
                     if (getTarget.CompareTag("PetiteFille")) // Si l'objet touché porte le tag PetiteFille, alors...
                     {
                         if (EventManager.s_Singleton.actualStepFirstEvent == 1) // Si l'étape de l'événement est l'étape n°1, alors...
@@ -109,18 +122,17 @@ public class InteractionController : MonoBehaviour {
                     }
                 }
             }
-            else
-            {
-                if (highlightedObject != null)
-                {
-                    highlightedObject.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
-                }
-            }
+            //else
+            //{
+            //    if (highlightedObject != null)
+            //    {
+            //        highlightedObject.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
+            //    }
+            //}
         }
     }
 
-
-    public GameObject ReturnSpottedObject() // Fonction qui gère le RayCast
+        public GameObject ReturnSpottedObject() // Fonction qui gère le RayCast
     {
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward); // Création du Raycast qui part de la caméra et va en avant
         RaycastHit hit;

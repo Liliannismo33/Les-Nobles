@@ -8,6 +8,8 @@ public class EventManager : MonoBehaviour {
 
     public int actualStepFirstEvent = 0;
     public int actualStepDoudouEvent = 0;
+    public int actualStepArmoireEvent = 0;
+    public int actualStepPhoneEvent = 0;
     public bool powerOff = false;
 
 
