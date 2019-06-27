@@ -26,6 +26,9 @@ public class InteractionController : MonoBehaviour {
     [Space]
     [Space]
 
+    private bool timerLaunch = false;
+    private float timeBeforeSpawnTrigger = 10f;
+    public GameObject triggerDoudouNeed;
     public GameObject key;
     public int stepState; // État actuel de l'événement
 
@@ -50,6 +53,16 @@ public class InteractionController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         
+        if (timerLaunch)
+        {
+            timeBeforeSpawnTrigger -= Time.deltaTime;
+            if (timeBeforeSpawnTrigger <= 0)
+            {
+                timeBeforeSpawnTrigger = 0;
+                triggerDoudouNeed.SetActive(true);
+                timerLaunch = false;
+            }
+        }
         //if (IntroManager.isIntroEnded == true) // Si l'introduction est terminée, alors...
             //{
 
@@ -105,24 +118,26 @@ public class InteractionController : MonoBehaviour {
                         }
 
 
-                        //if (EventManager.s_Singleton.actualStepFirstEvent == 2 || EventManager.s_Singleton.actualStepFirstEvent == 3) // Si l'etape de l'évenement est à l'étape n°2 ou n°3, alors...
-                        //{
-                        //    AudioManager.s_Singleton.PlayClip(noLightsSound);
-                        //}
-
-                        if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est l'étape 4, alors...
+                        else if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est l'étape 4, alors...
                         {
-                            EventManager.s_Singleton.actualStepFirstEvent++; // L'événement passe à l'étape suivante (donc terminé dans ce cas)
-                            EventManager.s_Singleton.actualStepDoudouEvent++; // L'événement DoudouEvent passe à l'étape suivante
+                            EventManager.s_Singleton.isFirstEventEnded = true;
                             AudioManager.s_Singleton.PlayClip(doudouSoundFirst);
+                            EventManager.s_Singleton.actualStepDoudouEvent++; // L'événement DoudouEvent passe à l'étape suivante
+                            timerLaunch = true;
                         }
 
-                        //else
+
+                        //else if (EventManager.s_Singleton.powerOff) // Si l'etape de l'évenement est à l'étape n°2 ou n°3, alors...
                         //{
-                        //    int audioToPlay = Random.Range(0, mySound.Length); // On attribue à une variable int une valeur aléatoire comprise entre l'index 0 et l'index maximum du tableau mySound
-                        //    AudioManager.s_Singleton.PlayClip(mySound[audioToPlay]); // On joue le son correspondant à l'index du tableau attribué à l'int audioToPlay
-                        //}
-                    }
+                        //    AudioManager.s_Singleton.PlayClip(noLightsSound);
+                        //}   
+
+                    //else
+                    //{
+                    //    int audioToPlay = Random.Range(0, mySound.Length); // On attribue à une variable int une valeur aléatoire comprise entre l'index 0 et l'index maximum du tableau mySound
+                    //    AudioManager.s_Singleton.PlayClip(mySound[audioToPlay]); // On joue le son correspondant à l'index du tableau attribué à l'int audioToPlay
+                    //}
+                }
                 }
             }
             //else

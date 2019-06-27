@@ -7,8 +7,14 @@ public class EventManager : MonoBehaviour {
     public static EventManager s_Singleton;
 
     public int actualStepFirstEvent = 0;
+    public bool isFirstEventEnded= false;
+
     public int actualStepDoudouEvent = 0;
+    public bool isDoudouEventEnded = false;
+
     public int actualStepArmoireEvent = 0;
+    public bool isArmoireEventEnded = false;
+
     public int actualStepPhoneEvent = 0;
     public bool powerOff = false;
 

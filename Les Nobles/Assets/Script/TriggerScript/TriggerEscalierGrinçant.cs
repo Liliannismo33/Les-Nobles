@@ -31,7 +31,7 @@ public class TriggerEscalierGrinçant : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        AudioManager.s_Singleton.PlayClip(escalierSound);
+        AudioManagerSecondary.s_Singleton.PlayClip(escalierSound);
         gameObject.GetComponent<Collider>().enabled = false;
         waitForRespawn = true;
     }
