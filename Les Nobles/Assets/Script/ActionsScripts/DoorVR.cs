@@ -13,6 +13,7 @@ public class DoorVR : MonoBehaviour
     public float rotationSpeed = 1f;
     private Transform handle;
     public bool isLock;
+    public bool armoireLock;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class DoorVR : MonoBehaviour
 
     private void HandHoverUpdate()
     {
-        if (!isLock)
+        if (!isLock && !armoireLock)
         {
             if (interactionHand != null)
             {
@@ -41,8 +42,13 @@ public class DoorVR : MonoBehaviour
 
     void Update()
     {
+        if (EventManager.s_Singleton.actualStepArmoireEvent == 2)
+        {
+            armoireLock = false;
+        }
+
         HandHoverUpdate();
-        if (!isLock)
+        if (!isLock && !armoireLock)
         {
             if (holdingHandle)
             {

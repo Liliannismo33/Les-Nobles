@@ -18,7 +18,10 @@ public class TriggerDessinTombe : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(supportDessin);
-        Destroy(gameObject);
+        if (EventManager.s_Singleton.actualStepDoudouEvent == 2)
+        {
+            Destroy(supportDessin);
+            Destroy(gameObject);
+        }
     }
 }

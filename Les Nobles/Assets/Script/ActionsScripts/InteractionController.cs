@@ -17,6 +17,7 @@ public class InteractionController : MonoBehaviour {
 
     [Header("Sons")]
 
+    public AudioClip debutArmoireEvent;
     public AudioClip[] mySound; // Tableau renseignant toutes les voice-lanes de la petite fille hors évenement
     public AudioClip noLightsSound; // La petite fille se plaind qu'il fait noir
     public AudioClip clefFilleSound; // La petite fille indique où se trouve la clé et ce que le joueur doit en faire
@@ -49,8 +50,8 @@ public class InteractionController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         
-        if (IntroManager.isIntroEnded == true) // Si l'introduction est terminée, alors...
-            {
+        //if (IntroManager.isIntroEnded == true) // Si l'introduction est terminée, alors...
+            //{
 
             if (EventManager.s_Singleton.actualStepArmoireEvent == 1)
             {
@@ -70,8 +71,9 @@ public class InteractionController : MonoBehaviour {
             getTarget = ReturnSpottedObject(); // Actualisation permanente du RayCast
             if (getTarget != null) // Si le RayCast renseigne un objet et que celui-ci est sur le layer 9 (InteractiveObject), alors...
             {
-                if (getTarget.CompareTag("DessinEvent") && EventManager.s_Singleton.actualStepArmoireEvent < 1)
+                if (getTarget.CompareTag("DessinEvent") && EventManager.s_Singleton.actualStepArmoireEvent < 1 && EventManager.s_Singleton.actualStepDoudouEvent == 2)
                 {
+                    AudioManager.s_Singleton.PlayClip(debutArmoireEvent);
                     EventManager.s_Singleton.actualStepArmoireEvent++;
                     //Debug.Log(EventManager.s_Singleton.actualStepArmoireEvent);
                     //return;
@@ -97,28 +99,29 @@ public class InteractionController : MonoBehaviour {
                         {
                             AudioManager.s_Singleton.PlayClip(clefFilleSound); // Joue le son renseigné en appelant la fonction PlayClip dans la classe AudioManager
                             EventManager.s_Singleton.actualStepFirstEvent++; // L'événement passe à l'étape suivante
+                            Debug.Log(EventManager.s_Singleton.actualStepFirstEvent);
                             key.SetActive(true); // Fait apparaître le GameObject key
                             key = null;
                         }
 
 
-                        else if (EventManager.s_Singleton.actualStepFirstEvent == 2 || EventManager.s_Singleton.actualStepFirstEvent == 3) // Si l'etape de l'évenement est à l'étape n°2 ou n°3, alors...
-                        {
-                            AudioManager.s_Singleton.PlayClip(noLightsSound);
-                        }
+                        //if (EventManager.s_Singleton.actualStepFirstEvent == 2 || EventManager.s_Singleton.actualStepFirstEvent == 3) // Si l'etape de l'évenement est à l'étape n°2 ou n°3, alors...
+                        //{
+                        //    AudioManager.s_Singleton.PlayClip(noLightsSound);
+                        //}
 
-                        else if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est l'étape 4, alors...
+                        if (EventManager.s_Singleton.actualStepFirstEvent == 4) // Si l'étape de l'événement est l'étape 4, alors...
                         {
                             EventManager.s_Singleton.actualStepFirstEvent++; // L'événement passe à l'étape suivante (donc terminé dans ce cas)
                             EventManager.s_Singleton.actualStepDoudouEvent++; // L'événement DoudouEvent passe à l'étape suivante
                             AudioManager.s_Singleton.PlayClip(doudouSoundFirst);
                         }
 
-                        else
-                        {
-                            int audioToPlay = Random.Range(0, mySound.Length); // On attribue à une variable int une valeur aléatoire comprise entre l'index 0 et l'index maximum du tableau mySound
-                            AudioManager.s_Singleton.PlayClip(mySound[audioToPlay]); // On joue le son correspondant à l'index du tableau attribué à l'int audioToPlay
-                        }
+                        //else
+                        //{
+                        //    int audioToPlay = Random.Range(0, mySound.Length); // On attribue à une variable int une valeur aléatoire comprise entre l'index 0 et l'index maximum du tableau mySound
+                        //    AudioManager.s_Singleton.PlayClip(mySound[audioToPlay]); // On joue le son correspondant à l'index du tableau attribué à l'int audioToPlay
+                        //}
                     }
                 }
             }
@@ -129,7 +132,7 @@ public class InteractionController : MonoBehaviour {
             //        highlightedObject.stopOutliner(); // arrête l'outliner de l'objet ciblé lorsque le RayCast ne cible plus rien
             //    }
             //}
-        }
+        //}
     }
 
         public GameObject ReturnSpottedObject() // Fonction qui gère le RayCast

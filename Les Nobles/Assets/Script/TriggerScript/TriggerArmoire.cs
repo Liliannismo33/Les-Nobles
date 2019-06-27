@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TriggerArmoire : MonoBehaviour {
 
+    public AudioClip mArmoireSound;
+    public AudioClip safeArmoireSound;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,9 +19,9 @@ public class TriggerArmoire : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (EventManager.s_Singleton.actualStepArmoireEvent == 1)
+        if (EventManager.s_Singleton.actualStepArmoireEvent == 1 && EventManager.s_Singleton.actualStepDoudouEvent == 2)
         {
-            //JOUER SON PETITE FILLE REGARDER DANS ARMOIRE
+            AudioManager.s_Singleton.PlayClip(mArmoireSound);
             EventManager.s_Singleton.actualStepArmoireEvent++;
             gameObject.GetComponent<Collider>().enabled = false;
             Debug.Log(EventManager.s_Singleton.actualStepArmoireEvent);
@@ -26,7 +29,7 @@ public class TriggerArmoire : MonoBehaviour {
 
         else if (EventManager.s_Singleton.actualStepArmoireEvent == 2)
         {
-            //C'EST BON C'EST SAFE DANS L'ARMOIRE
+            AudioManager.s_Singleton.PlayClip(safeArmoireSound);
             EventManager.s_Singleton.actualStepArmoireEvent++;
             gameObject.GetComponent<Collider>().enabled = false;
             Debug.Log(EventManager.s_Singleton.actualStepArmoireEvent);

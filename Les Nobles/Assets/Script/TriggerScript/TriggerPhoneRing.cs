@@ -14,6 +14,9 @@ public class TriggerPhoneRing : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        animRDC.enabled = false;
+        animEtage.enabled = false;
         color01 = phoneLightEtage.GetComponent<Light>().color;
 
         color01 = phoneLightEtage.GetComponent<Light>().color;
@@ -38,26 +41,31 @@ public class TriggerPhoneRing : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        EventManager.s_Singleton.actualStepPhoneEvent++;
-        AudioManager.s_Singleton.PlayClip(phoneRing);
+        if (EventManager.s_Singleton.actualStepDoudouEvent == 2)
+        {
+            EventManager.s_Singleton.actualStepPhoneEvent++;
+            AudioManager.s_Singleton.PlayClip(phoneRing);
 
-        phoneLightRDC.GetComponent<Light>().intensity = 2;
-        phoneLightRDC.GetComponent<Light>().color = color02;
-        phoneLightEtage.GetComponent<Light>().intensity = 2;
-        phoneLightEtage.GetComponent<Light>().color = color02;
+            phoneLightRDC.GetComponent<Light>().intensity = 2;
+            phoneLightRDC.GetComponent<Light>().color = color02;
+            phoneLightEtage.GetComponent<Light>().intensity = 2;
+            phoneLightEtage.GetComponent<Light>().color = color02;
 
 
-        animRDC = phoneLightRDC.GetComponent<Animator>();
-        animEtage = phoneLightEtage.GetComponent<Animator>();
+            animRDC = phoneLightRDC.GetComponent<Animator>();
+            animEtage = phoneLightEtage.GetComponent<Animator>();
 
-        //animRDC.SetBool("canPlay", true);
-        //animEtage.SetBool("canPlay", true);
-        animRDC.Play("LightFlashing");
-        animEtage.Play("LightFlashing");
-        //StartCoroutine(phoneLightRDCEnabler());
-        //StartCoroutine(phoneLightEtageEnabler());
+            //animRDC.SetBool("canPlay", true);
+            //animEtage.SetBool("canPlay", true);
+            animRDC.enabled = true;
+            animEtage.enabled = true;
+            animRDC.Play("LightFlashing");
+            animEtage.Play("LightFlashing");
+            //StartCoroutine(phoneLightRDCEnabler());
+            //StartCoroutine(phoneLightEtageEnabler());
 
-        gameObject.GetComponent<Collider>().enabled = false;
+            gameObject.GetComponent<Collider>().enabled = false;
+        }      
     }
 
     //void Flashlight()

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Phone : MonoBehaviour {
 
+    public AudioClip voisinSound;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,12 +18,9 @@ public class Phone : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Trigger");
-
         if (other.CompareTag("InteractionHand") && EventManager.s_Singleton.actualStepPhoneEvent == 1)
         {
-             //JOUER LE SON DU VOISIN CE CON
-             Debug.Log("Telephone glauque");
+             AudioManager.s_Singleton.PlayClip(voisinSound);
              EventManager.s_Singleton.actualStepPhoneEvent++;
         }
     }

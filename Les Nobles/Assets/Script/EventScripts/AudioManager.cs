@@ -23,7 +23,6 @@ public class AudioManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         myAS = GetComponent<AudioSource>();
-
     }
 	
 	// Update is called once per frame

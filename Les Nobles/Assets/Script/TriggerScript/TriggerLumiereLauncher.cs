@@ -9,6 +9,7 @@ public class TriggerLumiereLauncher : MonoBehaviour {
     public GameObject hlight;
 
     //public GameObject lightsOff;
+    public AudioClip thunderLightsOff;
     private Light lights;
     private bool waitForPlaySound = false;
     private float timerBeforePlay = 0;
@@ -78,5 +79,6 @@ public class TriggerLumiereLauncher : MonoBehaviour {
         hlight.SetActive(true);
         yield return new WaitForSeconds(0.05f);
         hlight.SetActive(false);
+        AudioManagerSecondary.s_Singleton.PlayClip(thunderLightsOff);
     }
 }
